@@ -52,8 +52,8 @@ export default function Home() {
                     transition={{ duration: 1, ease }}
                     className="flex items-center"
                 >
-                    <img src="./logo.png" alt="logo" className="w-20" />
-                    <span className="ml-3 text-xl font-bold text-white">HUMGENCE</span>
+                    <img src="./logo.png" alt="logo" className="w-[100px]" />
+                    <span className="ml-3 text-2xl font-bold text-white">HUMGENCE</span>
                 </motion.div>
             </div>
         );
@@ -96,7 +96,7 @@ export default function Home() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease }}
                     viewport={{ once: true }}
-                    className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+                    className="text-3xl sm:text-6xl md:text-8xl font-bold leading-tight">
                     <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.2 }} >
                         WE ARE
                     </motion.div>
@@ -135,7 +135,7 @@ export default function Home() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="text-xs sm:text-sm max-w-md"
+                    className="text-xs sm:text-4xl max-w-md"
                 >
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -168,51 +168,108 @@ export default function Home() {
 
             {/* WORK */}
             <motion.section
-                variants={stagger}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="relative px-4 sm:px-6 lg:px-10 py-16 md:py-20"
+                className="bg-black px-4 sm:px-6 lg:px-20 py-20"
             >
-                <motion.div
-                    initial={{ opacity: 0, rotate: 90 }}
-                    whileInView={{ opacity: 1, rotate: 90 }}
-                    transition={{ duration: 1, ease }}
-                    viewport={{ once: true }}
-                    className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 text-4xl font-bold tracking-widest text-black"
-                >
-                    WORK
-                </motion.div>
 
-                <motion.div variants={stagger} className="md:ml-14 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <motion.img variants={fadeUp}
-                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-                        className="w-full h-56 sm:h-64 object-cover"
-                    />
+                {/* ================= MAIN GRID ================= */}
+                <div className="grid grid-cols-1 lg:grid-cols-[120px_1fr] gap-10 items-stretch">
 
-                    <div className="grid grid-rows-2 gap-6">
-                        <motion.img variants={fadeLeft}
-                            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-                            className="w-full h-28 object-cover"
-                        />
-                        <motion.img variants={fadeRight}
-                            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
-                            className="w-full h-28 object-cover"
-                        />
+                    {/* ========== TEXT COLUMN ========== */}
+                    <div className="hidden lg:flex items-center justify-center">
+                        <motion.div
+                            initial={{ opacity: 0, y: 100, rotate: -90 }}
+                            whileInView={{ opacity: 1, y: 0, rotate: -90 }}
+                            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                            viewport={{ once: true }}
+                            className="text-[120px] font-extrabold text-red-600 leading-none select-none"
+                            style={{ transformOrigin: "center" }}
+                        >
+                            WORK
+                        </motion.div>
                     </div>
 
-                    <motion.img variants={fadeDown}
-                        src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
-                        className="w-full h-28 sm:h-32 sm:col-span-2 object-cover"
-                    />
-                </motion.div>
+                    {/* ========== IMAGES COLUMN ========== */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
-                <motion.div variants={fadeRight} className="text-center mt-10">
-                    <button className="border border-white px-6 py-2 text-xs">
+                        {/* LEFT – HERO IMAGE */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 80 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1, ease }}
+                            viewport={{ once: true }}
+                        >
+                            <img
+                                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+                                className="w-full aspect-[3/4] object-cover hover:scale-105 transition-transform duration-500"
+                                alt=""
+                            />
+                        </motion.div>
+
+                        {/* RIGHT – STACKED GRID */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                            <motion.div
+                                initial={{ opacity: 0, x: 80 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 1, ease }}
+                                viewport={{ once: true }}
+                            >
+                                <img
+                                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                    className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-500 hover:scale-105 transition-transform duration-500"
+                                    alt=""
+                                />
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, x: 80 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 1, ease, delay: 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                <img
+                                    src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
+                                    className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-500 hover:scale-105 transition-transform duration-500"
+                                    alt=""
+                                />
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 80 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1, ease }}
+                                viewport={{ once: true }}
+                                className="sm:col-span-2"
+                            >
+                                <img
+                                    src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+                                    className="w-full aspect-[16/7] object-cover hover:scale-105 transition-transform duration-500 hover:scale-105 transition-transform duration-500"
+                                    alt=""
+                                />
+                            </motion.div>
+
+                        </div>
+                    </div>
+                </div>
+
+                {/* ================= CTA ================= */}
+                <motion.div
+                    initial={{ opacity: 0, x: 80 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease }}
+                    viewport={{ once: true }}
+                    className="text-center mt-16"
+                >
+                    <button className="border border-white px-8 py-3 text-xs tracking-widest text-white">
                         VIEW ALL WORK
                     </button>
                 </motion.div>
+
             </motion.section>
+
 
             {/* BIG TEXT */}
             <motion.section
@@ -223,10 +280,10 @@ export default function Home() {
             >
                 {/* MAIN TEXT – FROM TOP */}
                 <motion.h2
-                    initial={{ opacity: 0, y: "-100vh" }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                    className="text-3xl sm:text-4xl md:text-5xl font-bold"
+                    className="text-[100px] font-bold text-white"
                 >
                     DO BIG THINGS
                 </motion.h2>
@@ -234,11 +291,10 @@ export default function Home() {
 
                 {/* SHADOW TEXT – FROM BOTTOM */}
                 <motion.h2
-                    initial={{ opacity: 0, y: 80 }}
-                    whileInView={{ opacity: 0.3, y: 0 }}
-                    transition={{ duration: 1, ease, delay: 0.15 }}
-                    viewport={{ once: true }}
-                    className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2"
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 0.3, x: 0 }}
+                    transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+                    className="text-[100px] font-bold mt-2 text-white"
                 >
                     DO BIG THINGS
                 </motion.h2>
@@ -246,43 +302,95 @@ export default function Home() {
 
             {/* NEWS */}
             <motion.section
-                variants={stagger}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="bg-[#5155a6] relative px-4 sm:px-6 lg:px-10 py-16 md:py-20"
+                className="bg-[#5155a6] px-4 sm:px-6 lg:px-20 py-20"
             >
+
+                {/* ================= MAIN GRID ================= */}
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_120px] gap-10 items-center">
+
+                    {/* ================= IMAGES COLUMN (LEFT) ================= */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                        {/* TOP WIDE IMAGE */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: true }}
+                            className="sm:col-span-2"
+                        >
+                            <img
+                                src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
+                                className="w-full aspect-[16/7] object-cover hover:scale-105 transition-transform duration-500"
+                                alt=""
+                            />
+                        </motion.div>
+
+                        {/* BOTTOM LEFT */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -60 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: true }}
+                        >
+                            <img
+                                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+                                className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-500"
+                                alt=""
+                            />
+                        </motion.div>
+
+                        {/* BOTTOM RIGHT */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -60 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1, delay: 0.1 }}
+                            viewport={{ once: true }}
+                        >
+                            <img
+                                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+                                className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-500"
+                                alt=""
+                            />
+                        </motion.div>
+
+                    </div>
+
+                    {/* ================= TEXT COLUMN (RIGHT) ================= */}
+                    <div className="hidden lg:grid place-items-center">
+                        <motion.div
+                            initial={{ opacity: 0, rotate: 90 }}
+                            whileInView={{ opacity: 1, rotate: 90 }}
+                            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                            viewport={{ once: true }}
+                            className="text-[120px] font-extrabold text-white leading-none select-none"
+                            style={{ transformOrigin: "center center" }}
+                        >
+                            NEWS
+                        </motion.div>
+                    </div>
+
+
+                </div>
+
+                {/* ================= CTA ================= */}
                 <motion.div
-                    initial={{ opacity: 0, rotate: 90 }}
-                    whileInView={{ opacity: 1, rotate: 90 }}
-                    transition={{ duration: 1, ease }}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 text-4xl font-bold tracking-widest"
+                    className="text-center mt-16"
                 >
-                    NEWS
-                </motion.div>
-
-                <motion.div variants={stagger} className="md:mr-14 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <motion.img variants={fadeUp}
-                        src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
-                        className="w-full h-32 sm:h-40 sm:col-span-2 object-cover"
-                    />
-                    <motion.img variants={fadeLeft}
-                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-                        className="w-full h-32 sm:h-40 object-cover"
-                    />
-                    <motion.img variants={fadeRight}
-                        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
-                        className="w-full h-32 sm:h-40 object-cover"
-                    />
-                </motion.div>
-
-                <motion.div variants={fadeUp} className="text-center mt-10">
-                    <button className="border border-white px-6 py-2 text-xs">
+                    <button className="border border-white px-8 py-3 text-xs tracking-widest text-white">
                         VIEW ALL NEWS
                     </button>
                 </motion.div>
+
             </motion.section>
+
 
         </div >
     );
