@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Header from "./components/Header";
 
 export default function Home() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const onLoad = () => setTimeout(() => setLoading(false), 700);
+        const onLoad = () => setTimeout(() => setLoading(false), 2000);
 
         if (document.readyState === "complete") onLoad();
         else window.addEventListener("load", onLoad);
@@ -60,65 +61,43 @@ export default function Home() {
 
     /* ================= PAGE ================= */
     return (
-        <div className="bg-[#5155a6] text-white w-full overflow-hidden">
+        <div className="text-white w-full overflow-hidden">
 
-            {/* NAVBAR */}
-            {/* FULL SCREEN BANNER WITH HEADER OVERLAY */}
-            <motion.section
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="relative h-screen w-full overflow-hidden"
-            >
+            {/* STICKY FULL SCREEN HERO */}
+            <section className="sticky top-0 h-screen w-full overflow-hidden z-0">
+
                 {/* BACKGROUND IMAGE */}
                 <motion.img
                     variants={fadeUp}
+                    initial="hidden"
+                    animate="visible"
                     src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70"
                     alt="Banner"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
 
-                {/* OVERLAY (optional – keeps text readable) */}
-                <div className="absolute inset-0 bg-black/20" />
+                {/* OVERLAY */}
+                <div className="absolute inset-0 bg-black/30" />
 
-                {/* HEADER ON BANNER */}
-                <motion.header
-                    initial={{ opacity: 0, y: -30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, ease }}
-                    className="relative z-10 flex justify-between items-center px-4 sm:px-6 lg:px-10 py-6"
-                >
-                    <div className="flex items-center font-bold text-base sm:text-lg text-white">
-                        <img src="./logo.png" alt="logo" className="w-16" />
-                        <span className="ml-2">HUMGENCE</span>
-                    </div>
-                    <div className="text-2xl cursor-pointer text-white">☰</div>
-                </motion.header>
+                {/* HEADER ON HERO */}
+                <Header />
 
-                {/* OPTIONAL HERO CONTENT (if you want text later) */}
-                {/* 
-                <div className="relative z-10 flex items-center justify-center h-full text-white">
-                    HERO CONTENT
-                </div> 
-                */}
-            </motion.section>
+            </section>
 
             {/* HERO */}
             <motion.section
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="px-4 sm:px-6 lg:px-10 py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-10"
-            >
+                className="relative z-10 bg-[#5155a6] px-4 sm:px-6 lg:px-10 py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-10">
                 {/* LEFT SIDE – HEADLINE (FROM LEFT) */}
                 <motion.div
                     initial={{ opacity: 0, x: -80 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease }}
                     viewport={{ once: true }}
-                    className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
-                >
-                    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+                    className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+                    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.2 }} >
                         WE ARE
                     </motion.div>
 
@@ -200,7 +179,7 @@ export default function Home() {
                     whileInView={{ opacity: 1, rotate: 90 }}
                     transition={{ duration: 1, ease }}
                     viewport={{ once: true }}
-                    className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 text-4xl font-bold tracking-widest"
+                    className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 text-4xl font-bold tracking-widest text-black"
                 >
                     WORK
                 </motion.div>
@@ -240,7 +219,7 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="px-4 sm:px-6 lg:px-10 py-16 md:py-20 text-center"
+                className="bg-[#5155a6] px-4 sm:px-6 lg:px-10 py-16 md:py-20 text-center"
             >
                 {/* MAIN TEXT – FROM TOP */}
                 <motion.h2
@@ -271,7 +250,7 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="relative px-4 sm:px-6 lg:px-10 py-16 md:py-20"
+                className="bg-[#5155a6] relative px-4 sm:px-6 lg:px-10 py-16 md:py-20"
             >
                 <motion.div
                     initial={{ opacity: 0, rotate: 90 }}
@@ -305,6 +284,6 @@ export default function Home() {
                 </motion.div>
             </motion.section>
 
-        </div>
+        </div >
     );
 }
