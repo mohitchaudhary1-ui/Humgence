@@ -89,7 +89,7 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="relative z-10 bg-[#5155a6] px-4 sm:px-6 lg:px-10 py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-10">
+                className="relative z-10 bg-[#56c0db] px-4 sm:px-6 lg:px-10 py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-10">
                 {/* LEFT SIDE – HEADLINE (FROM LEFT) */}
                 <motion.div
                     initial={{ opacity: 0, x: -80 }}
@@ -184,7 +184,7 @@ export default function Home() {
                             whileInView={{ opacity: 1, y: 0, rotate: -90 }}
                             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                             viewport={{ once: true }}
-                            className="text-[120px] font-extrabold text-red-600 leading-none select-none"
+                            className="text-[120px] font-extrabold text-[#56c0db] leading-none select-none"
                             style={{ transformOrigin: "center" }}
                         >
                             WORK
@@ -276,28 +276,40 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="bg-[#5155a6] px-4 sm:px-6 lg:px-10 py-16 md:py-20 text-center"
-            >
+                className="bg-black px-4 sm:px-6 lg:px-10 py-16 md:py-20 text-center">
                 {/* MAIN TEXT – FROM TOP */}
-                <motion.h2
-                    initial={{ opacity: 0, x: -100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                    className="text-[100px] font-bold text-white"
-                >
-                    DO BIG THINGS
-                </motion.h2>
+                <div className="overflow-hidden whitespace-nowrap">
+                    <motion.h2
+                        animate={{ x: ["-100%", "100%"] }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 5,
+                            ease: "linear",
+                        }}
+                        className="text-[100px] font-extrabold mt-2 uppercase inline-block"
+                    >
+                        DO BIG THINGS
+                    </motion.h2>
+                </div>
 
 
-                {/* SHADOW TEXT – FROM BOTTOM */}
-                <motion.h2
-                    initial={{ opacity: 0, x: 100 }}
-                    whileInView={{ opacity: 0.3, x: 0 }}
-                    transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-                    className="text-[100px] font-bold mt-2 text-white"
-                >
-                    DO BIG THINGS
-                </motion.h2>
+                <div className="overflow-hidden whitespace-nowrap">
+                    <motion.h2
+                        animate={{ x: ["100%", "-100%"] }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 5,
+                            ease: "linear",
+                        }}
+                        className="text-[100px] font-extrabold mt-2 uppercase inline-block"
+                        style={{
+                            WebkitTextStroke: "2px #56c0db",
+                            color: "transparent",
+                        }}
+                    >
+                        DO BIG THINGS
+                    </motion.h2>
+                </div>
             </motion.section>
 
             {/* NEWS */}
