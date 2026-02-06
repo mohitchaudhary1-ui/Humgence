@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
+import { createPortal } from "react-dom";
 
 interface MenuOverlayProps {
     isOpen: boolean;
@@ -6,7 +7,9 @@ interface MenuOverlayProps {
 }
 
 export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
-    return (
+    if (typeof window === "undefined") return null;
+
+    return createPortal(
         <AnimatePresence>
             {isOpen && (
                 <motion.div
@@ -14,7 +17,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="fixed inset-0 z-50 bg-[#5155a6] text-white"
+                    className="fixed inset-0 z-[999999] bg-black text-[#56c0db] overflow-y-auto"
                 >
                     {/* TOP BAR */}
                     <div className="flex justify-between items-start px-6 sm:px-10 py-6">
@@ -39,13 +42,12 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
 
                     {/* CONTENT */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 sm:px-10 mt-16">
-
                         {/* LEFT NAV */}
                         <motion.ul
                             initial={{ x: -80, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            className="space-y-4 text-3xl sm:text-4xl font-semibold"
+                            className="space-y-4 text-6xl font-semibold"
                         >
                             <li className="cursor-pointer hover:opacity-70">HOME</li>
                             <li className="cursor-pointer hover:opacity-70">THE WORK</li>
@@ -59,7 +61,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                             initial={{ x: 80, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-                            className="text-sm sm:text-base max-w-md"
+                            className="max-w-md text-2xl"
                         >
                             <h3 className="text-lg font-semibold mb-4">ADDRESS</h3>
                             <p>
@@ -73,10 +75,10 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                                 <p>+971 58 506 6985</p>
                             </div>
                         </motion.div>
-
                     </div>
                 </motion.div>
             )}
-        </AnimatePresence>
+        </AnimatePresence>,
+        document.body
     );
 }
