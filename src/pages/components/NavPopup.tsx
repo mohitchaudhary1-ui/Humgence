@@ -1,6 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function MenuOverlay({ isOpen, onClose }) {
+interface MenuOverlayProps {
+    isOpen: boolean;
+    onClose: () => void;
+}
+
+export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
     return (
         <AnimatePresence>
             {isOpen && (
