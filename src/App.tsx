@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './pages/components/Header'; // Adjust path as needed
 import Home from './pages/Home';
 import About from './pages/About'; // The "About" code I gave you earlier
+import Footer from './pages/components/Footer';
 
 const App: React.FC = () => {
   return (
@@ -18,8 +19,7 @@ const App: React.FC = () => {
             {/* Add more routes here as you build pages */}
           </Routes>
         </main>
-
-        {/* You can add a Footer component here later */}
+        <Footer />
       </div>
     </Router>
   );
