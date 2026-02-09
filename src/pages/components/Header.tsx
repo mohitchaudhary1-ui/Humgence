@@ -97,7 +97,7 @@ export default function Header() {
 
                             {/* Navigation Links - Smaller font on mobile to prevent overflow */}
                             <nav className="flex flex-col space-y-2 md:space-y-4">
-                                {["Home", "Services", "About", "Contact"].map((item, i) => (
+                                {["Home", "About", "Services", "Contact"].map((item, i) => (
                                     <motion.div key={item} custom={i} variants={linkVariants}>
                                         <Link
                                             to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
