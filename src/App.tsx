@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About'; // The "About" code I gave you earlier
 import Footer from './pages/components/Footer';
 import Services from './pages/Services';
+import Team from './pages/Team';
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/team" element={<Team />} />
 
             {/* Add more routes here as you build pages */}
           </Routes>
