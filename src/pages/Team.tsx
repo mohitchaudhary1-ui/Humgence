@@ -1,23 +1,160 @@
 import { motion } from "framer-motion";
 
 const team = [
-    { name: "Mohit", role: "App Developer", bio: "Building seamless mobile experiences for everyone.", grad: "from-pink-500 to-[#56c0db]", image: "/team/mohit_humgence.png" },
-    { name: "Amandeep Singh", role: "Technical Lead", bio: "Architecting robust systems and leading technical excellence.", grad: "from-[#56c0db] to-blue-600", image: "/team/amandeep_humgence.png" },
-    { name: "Harpreet Singh", role: "Lead Developer", bio: "Turning complex logic into fluid user movements.", grad: "from-indigo-500 to-[#56c0db]", image: "/team/harpreet_humgence.png" },
-    { name: "Akshita", role: "Content Writer", bio: "Crafting narratives that resonate with global audiences.", grad: "from-rose-500 to-[#56c0db]", image: "/team/akshita_humgence.png" },
-    { name: "Edita Kohli", role: "Social Media Lead", bio: "Creating engaging content to captivate audiences.", grad: "from-[#56c0db] to-emerald-500", image: "/team/edita_humgence.png" },
-    { name: "Sehaj Singh Saggu", role: "Social Media Manager", bio: "Turning brands into conversations that connect and convert.", grad: "from-purple-600 to-[#56c0db]", image: "/team/sehaj_humgence.png" },
-    { name: "Gurinder Singh", role: "Video Editor", bio: "Visual storyteller crafting cinematic experiences.", grad: "from-[#56c0db] to-slate-600", image: "/team/gurinder_humgence.png" },
-    { name: "Gursharan Singh", role: "Video & Graphic Designer", bio: "Blending motion and static design for visual impact.", grad: "from-orange-400 to-[#56c0db]", image: "/team/gursharan_humgence.png" },
-    { name: "Armaan Singh", role: "UI/UX Designer", bio: "Defining the visual language of modern interfaces.", grad: "from-[#56c0db] to-cyan-600", image: "/team/armaan_humgence.png" },
-    { name: "Deeksha", role: "HR Manager", bio: "Building the culture and talent behind our success.", grad: "from-amber-400 to-[#56c0db]", image: "/team/deeksha_humgence.png" },
-    { name: "Gagan Singh", role: "Backend Developer", bio: "Managing the complex data architectures under the hood.", grad: "from-[#56c0db] to-blue-800", image: "/team/gagan_humgence.png" },
-    { name: "Hardik", role: "Project Manager", bio: "Ensuring every vision is delivered with precision.", grad: "from-emerald-500 to-[#56c0db]", image: "/team/hardik_humgence.png" },
-    { name: "Ishvir Singh", role: "Full Stack Dev", bio: "Bridging the gap between design and functionality.", grad: "from-[#56c0db] to-violet-600", image: "/team/ishvir_humgence.png" },
-    { name: "Sneha", role: "Digital Marketing", bio: "Scaling brand presence across the digital ecosystem.", grad: "from-[#56c0db] to-teal-500", image: "/team/sneha_humgence.png" },
-    { name: "Sukhcharan Singh", role: "QA Engineer", bio: "The final line of defense for product quality.", grad: "from-blue-400 to-[#56c0db]", image: "/team/sukhcharan_humgence.png" },
-    { name: "Taran Singh", role: "Graphic Designer", bio: "Visualizing ideas through striking graphic art.", grad: "from-[#56c0db] to-orange-500", image: "/team/taran_humgence.png" },
-    { name: "Vansh Singh", role: "Support Lead", bio: "Dedicated to providing world-class user experiences.", grad: "from-yellow-400 to-[#56c0db]", image: "/team/vansh_humgence.png" },
+    {
+        name: "MOHIT CHAUDHARY",
+        role: "Founder",
+        bio: "The mind behind the mission and the force driving momentum.",
+        grad: "from-pink-500 to-[#56c0db]",
+        image: "/team/mohit_humgence.png"
+    },
+    {
+        name: "Deeksha",
+        role: "Operations Lead",
+        bio: "Building the culture and talent that power our success.",
+        grad: "from-amber-400 to-[#56c0db]",
+        image: "/team/deeksha_humgence.png"
+    },
+    {
+        name: "Sukhcharan Singh",
+        role: "Senior Video Editor",
+        bio: "Crafting edits that hold attention till the final frame.",
+        grad: "from-blue-400 to-[#56c0db]",
+        image: "/team/sukhcharan_humgence.png"
+    },
+    {
+        name: "Amandeep Singh",
+        role: "Technical Head",
+        bio: "A full-stack developer building powerful, scalable digital systems.",
+        grad: "from-[#56c0db] to-blue-600",
+        image: "/team/amandeep_humgence.png"
+    },
+    {
+        name: "Harpreet Singh",
+        role: "Meta & Google Ads Specialist",
+        bio: "Creates performance campaigns that drive real enquiries, not just traffic.",
+        grad: "from-indigo-500 to-[#56c0db]",
+        image: "/team/harpreet_humgence.png"
+    },
+    {
+        name: "Akshita",
+        role: "UI/UX Designer",
+        bio: "Designing intuitive user journeys that feel seamless and effortless.",
+        grad: "from-rose-500 to-[#56c0db]",
+        image: "/team/akshita_humgence.png"
+    },
+    {
+        name: "Edita Kohli",
+        role: "Social Media Lead",
+        bio: "Turning ordinary briefs into high-performing, engaging content.",
+        grad: "from-[#56c0db] to-emerald-500",
+        image: "/team/edita_humgence.png"
+    },
+    {
+        name: "Sehaj Singh Saggu",
+        role: "Social Media Manager",
+        bio: "Plans content strategies that genuinely connect and convert.",
+        grad: "from-purple-600 to-[#56c0db]",
+        image: "/team/sehaj_humgence.png"
+    },
+    {
+        name: "Gurinder Singh",
+        role: "Video Editor",
+        bio: "A visual storyteller crafting compelling cinematic experiences.",
+        grad: "from-[#56c0db] to-slate-600",
+        image: "/team/gurinder_humgence.png"
+    },
+    {
+        name: "Gursharan Singh",
+        role: "Video Editor & Graphic Designer",
+        bio: "Blending motion and design to create striking visual impact.",
+        grad: "from-orange-400 to-[#56c0db]",
+        image: "/team/gursharan_humgence.png"
+    },
+    {
+        name: "Armaan Singh",
+        role: "Video Editor",
+        bio: "Transforms raw footage into polished, scroll-stopping content.",
+        grad: "from-[#56c0db] to-cyan-600",
+        image: "/team/armaan_humgence.png"
+    },
+    {
+        name: "Gagan Singh",
+        role: "Cinematographer",
+        bio: "Captures motion and movement designed for maximum impact.",
+        grad: "from-[#56c0db] to-blue-800",
+        image: "/team/gagan_humgence.png"
+    },
+    {
+        name: "Hardik",
+        role: "Event Planner & Manager",
+        bio: "From setup to showtime, ensures every event runs smoothly.",
+        grad: "from-emerald-500 to-[#56c0db]",
+        image: "/team/hardik_humgence.png"
+    },
+    {
+        name: "Ishveer Singh",
+        role: "Social Media Manager, Meta Ads",
+        bio: "Ensuring your brand never blends into the ordinary.",
+        grad: "from-[#56c0db] to-violet-600",
+        image: "/team/ishvir_humgence.png"
+    },
+    {
+        name: "Sneha",
+        role: "Social Media Manager",
+        bio: "Crafting brand stories that connect with the right audience.",
+        grad: "from-[#56c0db] to-teal-500",
+        image: "/team/sneha_humgence.png"
+    },
+    {
+        name: "Shreya Kapoor",
+        role: "Social Media Manager, Influencer Marketing",
+        bio: "Driving purposeful collaborations that amplify brand visibility.",
+        grad: "from-red-400 to-[#56c0db]",
+        image: "/team/shreya_humgence.png"
+    },
+    {
+        name: "Vansh Singh",
+        role: "Brand Strategist, Social Media Manager",
+        bio: "Designing strategies that build brands beyond engagement metrics.",
+        grad: "from-yellow-400 to-[#56c0db]",
+        image: "/team/vansh_humgence.png"
+    },
+    {
+        name: "Prabhdeep",
+        role: "Business Development Manager",
+        bio: "Building strategic partnerships that fuel measurable growth.",
+        grad: "from-[#56c0db] to-green-600",
+        image: "/team/prabhdeep_humgence.png"
+    },
+    {
+        name: "Satyam Tripathi",
+        role: "Full Stack Developer",
+        bio: "Turning complex requirements into seamless digital solutions.",
+        grad: "from-slate-700 to-[#56c0db]",
+        image: "/team/satyam_humgence.png"
+    },
+    {
+        name: "Namrata",
+        role: "Photographer",
+        bio: "Capturing everyday moments as powerful brand visuals.",
+        grad: "from-orange-300 to-[#56c0db]",
+        image: "/team/namrata_humgence.png"
+    },
+    {
+        name: "Abhishek",
+        role: "Photographer & Videographer",
+        bio: "Blending photography and film to tell complete brand stories.",
+        grad: "from-[#56c0db] to-indigo-800",
+        image: "/team/abhishek_humgence.png"
+    },
+    {
+        name: "Taran",
+        role: "Graphic Designer",
+        bio: "Creating bold visuals designed to stand out instantly.",
+        grad: "from-[#56c0db] to-orange-500",
+        image: "/team/taran_humgence.png"
+    }
 ];
 
 export default function PerfectTeamGrid() {
@@ -102,11 +239,6 @@ export default function PerfectTeamGrid() {
                                     <p className="text-slate-300 text-sm font-light leading-relaxed">
                                         {member.bio}
                                     </p>
-
-                                    <div className="flex gap-4 pt-2">
-                                        <div className="text-white/40 hover:text-[#56c0db] transition-colors cursor-pointer text-xs font-bold uppercase tracking-widest">LinkedIn</div>
-                                        <div className="text-white/40 hover:text-[#56c0db] transition-colors cursor-pointer text-xs font-bold uppercase tracking-widest">Portfolio</div>
-                                    </div>
                                 </div>
                             </motion.div>
                         </div>
