@@ -4,7 +4,7 @@ const team = [
     {
         name: "MOHIT CHAUDHARY",
         role: "Founder",
-        bio: "The mind behind the mission and the force driving momentum.",
+        bio: `At the helm of Humgence is Mohit Chaudhary, a seasoned strategist whose 18-year career was forged within global consulting giants like Accenture, KPMG, and PwC. Mohit brings a rare depth of corporate precision to digital marketing, bridging the gap between complex business ecosystems and modern agility. Rather than viewing marketing in isolation, he applies a consultant’s foresight to ensure every campaign drives sustainable growth for leaders like Hero Honda and 3M. A national-level athlete, Mohit infuses business with the discipline of competitive sports. Under his leadership, Humgence delivers high-performance, strategic execution that stands the test of time.`,
         grad: "from-pink-500 to-[#56c0db]",
         image: "/team/mohit_humgence.png"
     },
@@ -18,28 +18,28 @@ const team = [
     {
         name: "Sukhcharan Singh",
         role: "Senior Video Editor",
-        bio: "Crafting edits that hold attention till the final frame.",
+        bio: "Sukhcharan Singh Jagdeo is the Design Team Lead and Head of Graphics Operations at Humgence, bringing 11 years of excellence in the design industry and 3 years of dedicated leadership within the company. As a master of visual storytelling, he seamlessly blends creativity with technical precision, turning concepts into powerful visual experiences. With deep expertise in Photoshop, Premiere Pro, and CorelDRAW, he leads both video and graphic teams to deliver refined, high-impact campaigns. Backed by a strong academic foundation in computer applications, Sukhcharan combines discipline with artistry—crafting designs that are not only visually striking but rich in meaning and emotion.",
         grad: "from-blue-400 to-[#56c0db]",
         image: "/team/sukhcharan_humgence.png"
     },
     {
         name: "Amandeep Singh",
         role: "Technical Head",
-        bio: "A full-stack developer building powerful, scalable digital systems.",
+        bio: "As our Technical Lead and Full Stack Developer, Amandeep Singh is the driving force behind the robust digital architectures that power our agency. He doesn’t just oversee development; he meticulously designs every layer of our systems, ensuring a seamless transition from complex backend logic to high-performance user interfaces. Amandeep bridges the gap between ambitious brand visions and technical reality, leading our engineering team with a blend of strategic foresight and hands-on expertise. His commitment to excellence ensures every project is scalable, secure, and world-class. Under his leadership, we continue to push the boundaries of what’s possible in digital innovation.",
         grad: "from-[#56c0db] to-blue-600",
         image: "/team/amandeep_humgence.png"
     },
     {
         name: "Harpreet Singh",
         role: "Meta & Google Ads Specialist",
-        bio: "Creates performance campaigns that drive real enquiries, not just traffic.",
+        bio: "Harpreet Singh is a results-driven Meta and Google Ads Specialist at Humgence, dedicated to delivering high-performance digital advertising campaigns. With strong expertise in paid media strategy, audience targeting, and conversion optimization, he helps brands maximize ROI and scale sustainably. Harpreet specializes in creating data-backed campaigns that generate quality leads, increase sales, and strengthen online presence. His analytical mindset, combined with creative ad execution, ensures every campaign is optimized for measurable growth. Passionate about performance marketing and continuous learning, Harpreet focuses on turning insights into impactful strategies that drive real business results in today’s competitive digital landscape.",
         grad: "from-indigo-500 to-[#56c0db]",
         image: "/team/harpreet_humgence.png"
     },
     {
         name: "Akshita",
         role: "UI/UX Designer",
-        bio: "Designing intuitive user journeys that feel seamless and effortless.",
+        bio: "Akshita Verma is a UI/UX Designer at Humgence, where she focuses on creating meaningful, user-centric digital experiences. She designs intuitive and visually engaging interfaces that align with brand goals and drive conversions. Her work involves user research, wireframing, prototyping, and high-fidelity design for web and mobile platforms. Collaborating closely with marketing strategists, developers, and stakeholders, Akshita translates business objectives into seamless user journeys. With a strong balance of creativity, usability, and data-driven thinking, she contributes to building scalable digital products that enhance engagement, improve usability, and deliver measurable impact for brands.",
         grad: "from-rose-500 to-[#56c0db]",
         image: "/team/akshita_humgence.png"
     },
@@ -53,35 +53,35 @@ const team = [
     {
         name: "Sehaj Singh Saggu",
         role: "Social Media Manager",
-        bio: "Plans content strategies that genuinely connect and convert.",
+        bio: "Sehaj Singh Saggu plays a pivotal role in shaping our digital presence through thoughtful strategy and refined execution. With a strong understanding of audience behavior and platform dynamics, he has contributed to elevated brand visibility, high-impact campaigns, and sustained engagement growth. His approach blends creativity with performance, ensuring every piece of content aligns with brand intent and long-term value. Known for his precision and consistency, Sehaj continues to strengthen our social media ecosystem with clarity, relevance, and measurable results.",
         grad: "from-purple-600 to-[#56c0db]",
         image: "/team/sehaj_humgence.png"
     },
     {
         name: "Gurinder Singh",
         role: "Video Editor",
-        bio: "A visual storyteller crafting compelling cinematic experiences.",
+        bio: "Gurinder Singh plays a vital role in shaping our visual storytelling as a Video Editor and Motion Graphics Artist at Humgence. His ability to transform ideas into refined, engaging visuals has consistently elevated the quality and impact of our content. With a strong sense of timing, detail, and creative direction, he has contributed to multiple high-performing campaigns and brand narratives. Gurinder’s dedication, consistency, and commitment to excellence reflect in every project he delivers. His performance continues to strengthen our creative standards, making him a valuable contributor to our growth and an important force behind our evolving visual identity.",
         grad: "from-[#56c0db] to-slate-600",
         image: "/team/gurinder_humgence.png"
     },
     {
         name: "Gursharan Singh",
         role: "Video Editor & Graphic Designer",
-        bio: "Blending motion and design to create striking visual impact.",
+        bio: "Gursharan is a highly skilled Video Editor and Graphic Designer with over five years of professional experience crafting compelling visual stories. With a sharp creative eye and strong technical expertise, he specializes in delivering impactful designs and seamless video edits that elevate brand presence. Proficient in Adobe Photoshop and Adobe Premiere Pro, along with the full Adobe Creative Suite, Gursharan combines creativity with precision to produce engaging digital content. From promotional videos and social media creatives to branding assets and cinematic edits, his work reflects attention to detail, storytelling strength, and a deep understanding of visual communication that drives results.",
         grad: "from-orange-400 to-[#56c0db]",
         image: "/team/gursharan_humgence.png"
     },
     {
         name: "Armaan Singh",
         role: "Video Editor",
-        bio: "Transforms raw footage into polished, scroll-stopping content.",
+        bio: "Armaan is a skilled Video Editor known for his sharp eye for detail and strong storytelling instincts. With hands-on expertise in industry-leading software including Adobe Premiere Pro and After Effects, he transforms raw footage into seamless, engaging visual narratives. His editing style blends precision with creativity, ensuring every frame contributes to the overall impact of the story. Whether it’s promotional content, social media campaigns, or cinematic projects, Armaan delivers polished results that capture attention and hold it. Passionate about evolving trends and techniques, he consistently brings fresh energy and technical excellence to every project he undertakes.",
         grad: "from-[#56c0db] to-cyan-600",
         image: "/team/armaan_humgence.png"
     },
     {
-        name: "Gagan Singh",
-        role: "Cinematographer",
-        bio: "Captures motion and movement designed for maximum impact.",
+        name: "Gagan Sharma",
+        role: "Creative Director",
+        bio: "Gagan Sharma is a creative director, content creator, and cinematographer with over five years of industry experience. He has collaborated with 70+ clients on a freelance basis, delivering impactful visual storytelling across digital and branded platforms. Gagan has also worked with Pitara TV, Chaupal Punjabi OTT, and Apple India, gaining diverse exposure across broadcast, streaming, and premium brand productions. His approach blends cinematic precision with strategic thinking, ensuring every project is both visually compelling and purpose-driven. From concept development to final execution, he focuses on crafting engaging narratives that elevate brands and create meaningful audience connections.",
         grad: "from-[#56c0db] to-blue-800",
         image: "/team/gagan_humgence.png"
     },
@@ -93,7 +93,7 @@ const team = [
         image: "/team/hardik_humgence.png"
     },
     {
-        name: "Ishveer Singh",
+        name: "Ishvir Singh",
         role: "Social Media Manager, Meta Ads",
         bio: "Ensuring your brand never blends into the ordinary.",
         grad: "from-[#56c0db] to-violet-600",
@@ -109,12 +109,12 @@ const team = [
     {
         name: "Shreya Kapoor",
         role: "Social Media Manager, Influencer Marketing",
-        bio: "Driving purposeful collaborations that amplify brand visibility.",
+        bio: "Shreya Kapoor is a results-driven Social Media Manager and Influencer Marketing Specialist with over 3 years of experience in digital marketing. She specialises in building strong brand identities through strategic content planning, performance-driven campaigns and impactful influencer collaborations. With a deep understanding of audience behaviour and platform trends, she crafts marketing strategies that enhance visibility, engagement and conversions. From brand positioning to campaign execution, Shreya focuses on measurable growth and authentic storytelling. Her expertise lies in turning ideas into digital success stories by blending creativity with data-driven insights to help brands establish a powerful and lasting online presence.",
         grad: "from-red-400 to-[#56c0db]",
         image: "/team/shreya_humgence.png"
     },
     {
-        name: "Vansh Singh",
+        name: "Vansh",
         role: "Brand Strategist, Social Media Manager",
         bio: "Designing strategies that build brands beyond engagement metrics.",
         grad: "from-yellow-400 to-[#56c0db]",
@@ -130,7 +130,7 @@ const team = [
     {
         name: "Satyam Tripathi",
         role: "Full Stack Developer",
-        bio: "Turning complex requirements into seamless digital solutions.",
+        bio: "Satyam Tripathi is a passionate full-stack developer and automation specialist focused on building scalable digital products. He works seamlessly across frontend and backend technologies, transforming ideas into fast, functional, and user-centric applications. From crafting clean, intuitive interfaces to developing secure APIs and robust database architectures, he takes ownership of the complete product lifecycle. Satyam actively explores AI integrations, workflow automation, and SaaS systems to build efficient, revenue-driven solutions. Committed to continuous growth, he constantly sharpens his problem-solving, system design, and performance optimization skills. He believes in writing clean code, building with purpose, and delivering technology that creates lasting business impact.",
         grad: "from-slate-700 to-[#56c0db]",
         image: "/team/satyam_humgence.png"
     },
@@ -230,12 +230,6 @@ export default function PerfectTeamGrid() {
                             >
                                 <div className="space-y-3">
                                     <div className="w-12 h-[2px] bg-[#56c0db]" />
-                                    <h3 className="text-3xl font-black text-white uppercase tracking-tighter leading-none">
-                                        {member.name}
-                                    </h3>
-                                    <p className="text-[#56c0db] text-xs font-black uppercase tracking-[0.3em]">
-                                        {member.role}
-                                    </p>
                                     <p className="text-slate-300 text-sm font-light leading-relaxed">
                                         {member.bio}
                                     </p>
