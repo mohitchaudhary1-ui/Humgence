@@ -4,7 +4,7 @@ const team = [
     {
         name: "MOHIT CHAUDHARY",
         role: "Founder",
-        bio: `At the helm of Humgence is Mohit Chaudhary, a seasoned strategist whose 18-year career was forged within global consulting giants like Accenture, KPMG, and PwC. Mohit brings a rare depth of corporate precision to digital marketing, bridging the gap between complex business ecosystems and modern agility. Rather than viewing marketing in isolation, he applies a consultant’s foresight to ensure every campaign drives sustainable growth for leaders like Hero Honda and 3M. A national-level athlete, Mohit infuses business with the discipline of competitive sports. Under his leadership, Humgence delivers high-performance, strategic execution that stands the test of time.`,
+        bio: "At the helm of Humgence is Mohit Chaudhary, a seasoned strategist whose 18-year career has been defined by a relentless pursuit of precision and long-term value. Shaped by the rigorous environments of global consulting giants—including Accenture, KPMG, PwC, and SAP Labs—Mohit brings a rare depth of corporate strategy to the fast-paced world of digital marketing. <br/><br/> Mohit’s expertise lies in his ability to bridge the gap between complex business ecosystems and modern digital agility. He does not view marketing in isolation; rather, he approaches it through the lens of a consultant, ensuring that every campaign is backed by foresight and structured for sustainable growth. His portfolio includes high-impact projects for industry leaders such as Hero Honda, Avantha Power, 3M, the Trident Group, and various Public Sector Undertakings (PSUs). Beyond the boardroom, Mohit channels the discipline and competitive spirit of a national-level athlete. A distinguished football and golf player, he applies the same focus, resilience, and strategic calculation to business that he does to sports. Under his leadership, Humgence delivers not just innovation, but performance-focused execution that stands the test of time.",
         grad: "from-pink-500 to-[#56c0db]",
         image: "/team/mohit_humgence.png"
     },
@@ -23,11 +23,11 @@ const team = [
         image: "/team/sukhcharan_humgence.png"
     },
     {
-        name: "Amandeep Singh",
-        role: "Technical Head",
-        bio: "As our Technical Lead and Full Stack Developer, Amandeep Singh is the driving force behind the robust digital architectures that power our agency. He doesn’t just oversee development; he meticulously designs every layer of our systems, ensuring a seamless transition from complex backend logic to high-performance user interfaces. Amandeep bridges the gap between ambitious brand visions and technical reality, leading our engineering team with a blend of strategic foresight and hands-on expertise. His commitment to excellence ensures every project is scalable, secure, and world-class. Under his leadership, we continue to push the boundaries of what’s possible in digital innovation.",
-        grad: "from-[#56c0db] to-blue-600",
-        image: "/team/amandeep_humgence.png"
+        name: "Gursharan Singh",
+        role: "Video Editor & Graphic Designer",
+        bio: "Gursharan is a highly skilled Video Editor and Graphic Designer with over five years of professional experience crafting compelling visual stories. With a sharp creative eye and strong technical expertise, he specializes in delivering impactful designs and seamless video edits that elevate brand presence. Proficient in Adobe Photoshop and Adobe Premiere Pro, along with the full Adobe Creative Suite, Gursharan combines creativity with precision to produce engaging digital content. From promotional videos and social media creatives to branding assets and cinematic edits, his work reflects attention to detail, storytelling strength, and a deep understanding of visual communication that drives results.",
+        grad: "from-orange-400 to-[#56c0db]",
+        image: "/team/gursharan_humgence.png"
     },
     {
         name: "Harpreet Singh",
@@ -35,6 +35,13 @@ const team = [
         bio: "Harpreet Singh is a results-driven Meta and Google Ads Specialist at Humgence, dedicated to delivering high-performance digital advertising campaigns. With strong expertise in paid media strategy, audience targeting, and conversion optimization, he helps brands maximize ROI and scale sustainably. Harpreet specializes in creating data-backed campaigns that generate quality leads, increase sales, and strengthen online presence. His analytical mindset, combined with creative ad execution, ensures every campaign is optimized for measurable growth. Passionate about performance marketing and continuous learning, Harpreet focuses on turning insights into impactful strategies that drive real business results in today’s competitive digital landscape.",
         grad: "from-indigo-500 to-[#56c0db]",
         image: "/team/harpreet_humgence.png"
+    },
+    {
+        name: "Amandeep Singh",
+        role: "Technical Head",
+        bio: "As our Technical Lead and Full Stack Developer, Amandeep Singh is the driving force behind the robust digital architectures that power our agency. He doesn’t just oversee development; he meticulously designs every layer of our systems, ensuring a seamless transition from complex backend logic to high-performance user interfaces. Amandeep bridges the gap between ambitious brand visions and technical reality, leading our engineering team with a blend of strategic foresight and hands-on expertise. His commitment to excellence ensures every project is scalable, secure, and world-class. Under his leadership, we continue to push the boundaries of what’s possible in digital innovation.",
+        grad: "from-[#56c0db] to-blue-600",
+        image: "/team/amandeep_humgence.png"
     },
     {
         name: "Akshita",
@@ -65,13 +72,6 @@ const team = [
         image: "/team/gurinder_humgence.png"
     },
     {
-        name: "Gursharan Singh",
-        role: "Video Editor & Graphic Designer",
-        bio: "Gursharan is a highly skilled Video Editor and Graphic Designer with over five years of professional experience crafting compelling visual stories. With a sharp creative eye and strong technical expertise, he specializes in delivering impactful designs and seamless video edits that elevate brand presence. Proficient in Adobe Photoshop and Adobe Premiere Pro, along with the full Adobe Creative Suite, Gursharan combines creativity with precision to produce engaging digital content. From promotional videos and social media creatives to branding assets and cinematic edits, his work reflects attention to detail, storytelling strength, and a deep understanding of visual communication that drives results.",
-        grad: "from-orange-400 to-[#56c0db]",
-        image: "/team/gursharan_humgence.png"
-    },
-    {
         name: "Armaan Singh",
         role: "Video Editor",
         bio: "Armaan is a skilled Video Editor known for his sharp eye for detail and strong storytelling instincts. With hands-on expertise in industry-leading software including Adobe Premiere Pro and After Effects, he transforms raw footage into seamless, engaging visual narratives. His editing style blends precision with creativity, ensuring every frame contributes to the overall impact of the story. Whether it’s promotional content, social media campaigns, or cinematic projects, Armaan delivers polished results that capture attention and hold it. Passionate about evolving trends and techniques, he consistently brings fresh energy and technical excellence to every project he undertakes.",
@@ -95,7 +95,7 @@ const team = [
     {
         name: "Ishvir Singh",
         role: "Social Media Manager, Meta Ads",
-        bio: "Ensuring your brand never blends into the ordinary.",
+        bio: "Ishvir Khangura is a results-driven digital marketing professional with over 1.5 years of practical experience in performance and social media marketing. He began his career as an Email Marketer, specializing in lead generation through targeted outreach and automation strategies. Over time, he expanded his expertise into Social Media Management, where he handled content planning, audience engagement, and brand growth. He has also worked as a Meta Ads Executive, managing and optimizing paid campaigns focused on generating quality leads and improving ROI. Ishvir brings a strong blend of creativity, analytical thinking, and execution skills to every project he handles.",
         grad: "from-[#56c0db] to-violet-600",
         image: "/team/ishvir_humgence.png"
     },
@@ -226,13 +226,49 @@ export default function PerfectTeamGrid() {
                         {/* 3. HOVER CONTENT PANEL */}
                         <div className="absolute inset-0 z-20 flex flex-col justify-end">
                             <motion.div
-                                className="p-8 bg-black/40 backdrop-blur-xl border-t border-white/10 translate-y-[101%] group-hover:translate-y-0 transition-transform duration-[0.6s] ease-[0.16, 1, 0.3, 1]"
+                                className="absolute inset-0 z-20 
+               flex flex-col
+               p-6 sm:p-10 
+               bg-black/85 backdrop-blur-2xl 
+               translate-y-full group-hover:translate-y-0 
+               transition-transform duration-[0.7s] ease-[0.16,1,0.3,1]"
                             >
-                                <div className="space-y-3">
-                                    <div className="w-12 h-[2px] bg-[#56c0db]" />
-                                    <p className="text-slate-300 text-sm font-light leading-relaxed">
-                                        {member.bio}
-                                    </p>
+                                {/* Inner Content Wrapper */}
+                                <div className="relative h-full flex flex-col pt-10">
+
+                                    {/* Header inside the slide-up */}
+                                    <div className="mb-4">
+                                        <motion.div
+                                            initial={{ width: 0 }}
+                                            whileInView={{ width: "3rem" }}
+                                            className="h-[2px] bg-[#56c0db] mb-2"
+                                        />
+                                        <p className="text-[#56c0db] text-[10px] font-black uppercase tracking-[0.2em]">
+                                            About Member
+                                        </p>
+                                    </div>
+
+                                    {/* Bio Text Container with Custom Scrollbar */}
+                                    <div className="flex-1 overflow-y-auto pr-2 
+                        /* Custom Scrollbar Styling */
+                        scrollbar-thin 
+                        scrollbar-thumb-[#56c0db]/40 
+                        scrollbar-track-transparent 
+                        hover:scrollbar-thumb-[#56c0db]
+                        /* For Chrome/Safari/Edge */
+                        [&::-webkit-scrollbar]:w-1
+                        [&::-webkit-scrollbar-track]:bg-transparent
+                        [&::-webkit-scrollbar-thumb]:bg-[#56c0db]/30
+                        [&::-webkit-scrollbar-thumb]:rounded-full
+                        hover:[&::-webkit-scrollbar-thumb]:bg-[#56c0db]
+                        /* Fade Mask */
+                        [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
+
+                                        <p className="text-slate-200 text-sm sm:text-[15px] font-light leading-relaxed tracking-wide py-4">
+                                            {member.bio}
+                                        </p>
+                                    </div>
+
                                 </div>
                             </motion.div>
                         </div>
