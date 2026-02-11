@@ -71,8 +71,8 @@ export default function Header() {
                         </span>
                         <div className="flex flex-col gap-1.5 w-6 md:w-8 items-end">
                             <span className={`h-[2px] bg-white transition-all duration-300 ${isOpen ? "w-full rotate-45 translate-y-[8px] bg-[#56c0db]" : "w-full"}`} />
-                            <span className={`h-[2px] bg-white transition-all duration-300 ${isOpen ? "opacity-0" : "w-2/3"}`} />
-                            <span className={`h-[2px] bg-white transition-all duration-300 ${isOpen ? "w-full -rotate-45 -translate-y-[8px] bg-[#56c0db]" : "w-1/2"}`} />
+                            <span className={`h-[2px] bg-white transition-all duration-300 ${isOpen ? "opacity-0" : "w-full"}`} />
+                            <span className={`h-[2px] bg-white transition-all duration-300 ${isOpen ? "w-full -rotate-45 -translate-y-[8px] bg-[#56c0db]" : "w-full"}`} />
                         </div>
                     </button>
                 </div>

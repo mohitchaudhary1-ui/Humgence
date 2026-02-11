@@ -55,7 +55,7 @@ export default function About() {
                         initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}
                         className="relative"
                     >
-                        <div className="aspect-[4/5] bg-gradient-to-br from-[#56c0db]/20 to-transparent rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+                        <div className="aspect-[4/5] bg-gradient-to-br from-[#56c0db]/20 to-transparent rounded-3xl overflow-hidden">
                             {/* Replace with actual image */}
                             <div className="w-full h-full bg-white/5 flex items-center justify-center text-white/10 text-8xl font-black">
                                 <img src="./mohit_chaudhary.jpg" alt="" />
