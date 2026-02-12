@@ -171,15 +171,9 @@ export default function ServicesPage() {
             {/* --- HERO SECTION --- */}
             <section className="relative h-[60vh] flex flex-col justify-center items-center px-6 bg-white border-b border-slate-100 overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
-
-                <Reveal>
-                    <span className="bg-sky-100 text-sky-600 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest mb-6 block">
-                        Our Expertise
-                    </span>
-                </Reveal>
                 <Reveal delay={0.1}>
                     <h1 className="text-6xl md:text-9xl font-black tracking-tighter text-center leading-[0.9]">
-                        OUR <span className="text-sky-500 italic">SERVICES</span>
+                        OUR <span className="text-[#56c0db] italic">SERVICES</span>
                     </h1>
                 </Reveal>
             </section>
@@ -200,16 +194,19 @@ export default function ServicesPage() {
                                 <Reveal key={i} delay={i * 0.1}>
                                     <div className="group bg-white p-10 h-full rounded-[2.5rem] border border-slate-200 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:border-sky-200 transition-all duration-500 flex flex-col">
 
-                                        <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-sky-50 transition-colors">
-                                            <svg className="w-7 h-7 text-slate-400 group-hover:text-sky-500 transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d={service.icon} />
-                                            </svg>
+                                        <div className="flex">
+
+
+                                            <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-sky-50 transition-colors">
+                                                <svg className="w-7 h-7 text-slate-400 group-hover:text-sky-500 transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d={service.icon} />
+                                                </svg>
+                                            </div>
+
+                                            <h3 className="text-xl font-bold mt-4 mx-auto text-slate-800 uppercase tracking-tight leading-tight">
+                                                {service.title}
+                                            </h3>
                                         </div>
-
-                                        <h3 className="text-xl font-bold mb-6 text-slate-800 uppercase tracking-tight leading-tight">
-                                            {service.title}
-                                        </h3>
-
                                         <ul className="space-y-4 flex-grow">
                                             {service.points.map((point, pIdx) => (
                                                 <li key={pIdx} className="flex gap-3 text-sm text-slate-500 leading-relaxed font-medium">
@@ -227,7 +224,7 @@ export default function ServicesPage() {
             </div>
 
             {/* --- CTA SECTION --- */}
-            <section className="bg-sky-500 py-24 px-6 text-center">
+            <section className="bg-[#56c0db] py-24 px-6 text-center">
                 <Reveal>
                     <h2 className="text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8">
                         Ready to scale your <br /> digital presence?
