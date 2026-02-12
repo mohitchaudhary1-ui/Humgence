@@ -21,7 +21,7 @@ export default function AboutPage() {
         <div className="bg-white text-slate-900 selection:bg-[#56c0db] selection:text-white">
 
             {/* --- SECTION 1: WHO WE ARE --- */}
-            <section className="relative bg-white py-24 md:py-48 px-6 sm:px-12 lg:px-24 overflow-hidden selection:bg-[#56c0db]/30">
+            <section className="relative bg-white py-24 md:py-30 px-6 sm:px-12 lg:px-24 overflow-hidden selection:bg-[#56c0db]/30">
                 {/* Subtle Decorative Background */}
                 <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none -z-10">
                     <div className="absolute top-1/4 -right-20 w-[500px] h-[500px] bg-[#56c0db] rounded-full blur-[120px]" />
@@ -34,11 +34,9 @@ export default function AboutPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false }}
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                        className="mb-16 md:mb-24"
+                        className="mb-10 md:mb-10"
                     >
-                        <span className="text-[#56c0db] font-black text-xs md:text-sm tracking-[0.4em] uppercase mb-6 block">
-                            The Agency
-                        </span>
+
                         <h2 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter uppercase leading-[0.85] text-slate-900">
                             WHO WE <span className="text-[#56c0db] italic">ARE?</span>
                         </h2>
@@ -46,7 +44,7 @@ export default function AboutPage() {
 
                     {/* --- CONTENT GRID --- */}
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-20 items-start mb-32">
-                        <div className="lg:col-span-12 xl:col-span-7 space-y-10">
+                        <div className="lg:col-span-12 xl:col-span-12 space-y-10">
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
@@ -55,8 +53,7 @@ export default function AboutPage() {
                             >
                                 <p className="text-slate-500 text-xl md:text-2xl font-medium leading-relaxed">
                                     We are a full-service digital marketing agency helping businesses grow through
-                                    <span className="text-slate-900"> strategy, creativity and technology</span>. Our expertise
-                                    covers the entire digital spectrum, designed to drive measurable growth.
+                                    <span className="text-slate-900"> strategy, creativity and technology</span>. Our expertise spans digital marketing, performance marketing , social media marketing, brand consulting, SEO services, website development and app development and more - all designed to drive measurable online  growth.
                                 </p>
                             </motion.div>
 
@@ -145,7 +142,7 @@ export default function AboutPage() {
                                 <img
                                     src="/team/mohit_humgence.png" // Replace with actual image path
                                     alt="Mohit Chaudhary - Leadership"
-                                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                    className="w-full h-full object-cover transition-transform duration-1000 "
                                 />
 
                                 {/* Glass Overlay on Hover */}
@@ -179,7 +176,7 @@ export default function AboutPage() {
                         className="lg:col-span-5 space-y-8 relative"
                     >
                         {/* Big Quote Mark Decoration */}
-                        <span className="absolute -top-10 -left-6 text-white/10 text-9xl font-serif select-none">“</span>
+                        <span className="absolute -top-10 -left-6  text-9xl font-serif select-none">“</span>
 
                         <div className="space-y-6 text-white/90 text-lg md:text-xl leading-relaxed font-medium">
                             <p>
@@ -306,10 +303,16 @@ export default function AboutPage() {
                                     </Link>
 
                                 )}
+
                             </motion.div>
                         ))}
+
                     </div>
+
                 </div>
+                <p className="text-slate-500  mx-auto text-center font-bold mt-20">
+                    We are not just service provider, we are your long term digital growth partner.
+                </p>
             </section>
 
             {/* --- SECTION 4: VISION & MISSION --- */}
