@@ -22,11 +22,11 @@ export default function ClientSlider() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <span className="text-sky-600 font-bold tracking-[0.2em] text-xs uppercase">
+                    <span className="text-[#55c0dc] font-bold tracking-[0.2em] text-xs uppercase">
                         Our Trusted Partners
                     </span>
                     <h2 className="text-3xl md:text-5xl font-black text-slate-800 mt-3 mb-4">
-                        Working with the <span className="text-sky-500">Industry Giants</span>
+                        Working with the <span className="text-[#55c0dc]">Industry Giants</span>
                     </h2>
                     <div className="w-24 h-1 bg-sky-500 mx-auto rounded-full" />
                 </motion.div>

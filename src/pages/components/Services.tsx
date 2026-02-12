@@ -35,11 +35,11 @@ export default function HomeServices() {
             <div className="max-w-7xl mx-auto">
 
                 {/* --- HEADER --- */}
-                <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/5 pb-10 font-bold">
+                <div className="mb-5 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/5 pb-10 font-bold">
                     <div className="max-w-2xl">
                         <h2 className="text-[#56c0db] text-[10px] font-black uppercase tracking-[0.5em] mb-4">Featured Expertise</h2>
                         <h3 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none">
-                            Our Core <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/20 text-slate-500">Services.</span>
+                            Our <span className="">Services</span>
                         </h3>
                     </div>
                 </div>

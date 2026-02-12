@@ -1,15 +1,46 @@
+"use client";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function ContactPage() {
+    const [result, setResult] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setIsSubmitting(true);
+        setResult("Sending....");
+
+        const formData = new FormData(event.target);
+
+        // Enter your Web3Forms Access Key here
+        formData.append("access_key", "a0fbedaf-6df2-4551-b7eb-ec7f7dc6b018");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            setIsSubmitting(false);
+            event.target.reset();
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <div className="bg-[#0f172a] min-h-screen selection:bg-[#56c0db] selection:text-white pb-20">
 
             {/* --- CINEMATIC HEADER --- */}
             <section className="relative h-[50vh] flex flex-col justify-center items-center px-6 text-center overflow-hidden">
-                {/* Refined Background Mesh */}
                 <div className="absolute inset-0 z-0">
                     <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#56c0db]/20 rounded-full blur-[100px] animate-pulse" />
-                    {/* Professional Dot Matrix Overlay */}
                     <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `radial-gradient(#ffffff 1px, transparent 1px)`, backgroundSize: '32px 32px' }} />
                 </div>
 
@@ -83,41 +114,71 @@ export default function ContactPage() {
                         transition={{ duration: 0.8 }}
                         className="lg:col-span-8 bg-slate-50 p-8 md:p-16 lg:p-20"
                     >
-                        <form className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+                        <form onSubmit={onSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+                            {/* Full Name */}
                             <div className="space-y-2 group">
                                 <label className="text-[10px] font-bold uppercase text-slate-400 tracking-widest ml-1 transition-colors group-focus-within:text-[#56c0db]">Full Name</label>
-                                <input type="text" className="w-full border-b border-slate-200 bg-transparent py-3 focus:outline-none focus:border-[#56c0db] transition-colors text-slate-900 font-semibold placeholder:text-slate-300" placeholder="e.g. John Doe" />
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    className="w-full border-b border-slate-200 bg-transparent py-3 focus:outline-none focus:border-[#56c0db] transition-colors text-slate-900 font-semibold placeholder:text-slate-300"
+                                    placeholder="e.g. John Doe"
+                                />
                             </div>
 
+                            {/* Phone */}
                             <div className="space-y-2 group">
+                                <label className="text-[10px] font-bold uppercase text-slate-400 tracking-widest ml-1 transition-colors group-focus-within:text-[#56c0db]">Phone</label>
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    required
+                                    className="w-full border-b border-slate-200 bg-transparent py-3 focus:outline-none focus:border-[#56c0db] transition-colors text-slate-900 font-semibold placeholder:text-slate-300"
+                                    placeholder="e.g. 9876543210"
+                                />
+                            </div>
+
+                            {/* Email Address */}
+                            <div className="md:col-span-2 space-y-2 group">
                                 <label className="text-[10px] font-bold uppercase text-slate-400 tracking-widest ml-1 transition-colors group-focus-within:text-[#56c0db]">Email Address</label>
-                                <input type="email" className="w-full border-b border-slate-200 bg-transparent py-3 focus:outline-none focus:border-[#56c0db] transition-colors text-slate-900 font-semibold placeholder:text-slate-300" placeholder="name@company.com" />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    className="w-full border-b border-slate-200 bg-transparent py-3 focus:outline-none focus:border-[#56c0db] transition-colors text-slate-900 font-semibold placeholder:text-slate-300"
+                                    placeholder="name@company.com"
+                                />
                             </div>
 
-                            <div className="md:col-span-2 space-y-4">
-                                <label className="text-[10px] font-bold uppercase text-slate-400 tracking-widest ml-1">Inquiry Type</label>
-                                <div className="flex flex-wrap gap-2">
-                                    {['Development', 'UI/UX Design', 'Marketing', 'Video Production'].map((tag) => (
-                                        <button key={tag} type="button" className="px-5 py-2.5 rounded-xl border border-slate-200 text-[11px] font-bold text-slate-600 hover:border-[#56c0db] hover:bg-[#56c0db]/5 hover:text-[#56c0db] transition-all">
-                                            {tag}
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
-
+                            {/* Message Brief */}
                             <div className="md:col-span-2 space-y-2 pt-2">
                                 <label className="text-[10px] font-bold uppercase text-slate-400 tracking-widest ml-1">Message Brief</label>
-                                <textarea rows={4} className="w-full border border-slate-200 rounded-2xl p-5 focus:outline-none focus:border-[#56c0db] focus:ring-4 focus:ring-[#56c0db]/5 transition-all text-slate-900 font-medium placeholder:text-slate-300 resize-none bg-white" placeholder="Describe your project vision..."></textarea>
+                                <textarea
+                                    name="message"
+                                    required
+                                    rows={4}
+                                    className="w-full border border-slate-200 rounded-2xl p-5 focus:outline-none focus:border-[#56c0db] focus:ring-4 focus:ring-[#56c0db]/5 transition-all text-slate-900 font-medium placeholder:text-slate-300 resize-none bg-white"
+                                    placeholder="Describe your project vision..."
+                                ></textarea>
                             </div>
 
                             <div className="md:col-span-2">
                                 <motion.button
+                                    type="submit"
+                                    disabled={isSubmitting}
                                     whileHover={{ scale: 1.01, translateY: -2 }}
                                     whileTap={{ scale: 0.99 }}
-                                    className="w-full bg-slate-900 text-white py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-[11px] shadow-xl shadow-slate-200 hover:bg-[#56c0db] hover:shadow-[#56c0db]/20 transition-all duration-300"
+                                    className="w-full bg-slate-900 text-white py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-[11px] shadow-xl shadow-slate-200 hover:bg-[#56c0db] hover:shadow-[#56c0db]/20 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    Submit Inquiry
+                                    {isSubmitting ? "Sending..." : "Submit Inquiry"}
                                 </motion.button>
+
+                                {result && (
+                                    <p className={`mt-4 text-center text-[10px] font-bold uppercase tracking-widest ${result.includes("Successfully") ? "text-emerald-500" : "text-red-500"}`}>
+                                        {result}
+                                    </p>
+                                )}
                             </div>
                         </form>
                     </motion.div>

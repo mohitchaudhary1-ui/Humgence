@@ -28,12 +28,12 @@ export default function AboutSection() {
                     <div>
                         <h3 className="font-white font-bold text-4xl uppercase mb-4">Who We Are?</h3>
                         <p className="font-bold text-white leading-tight">
-                            We’re more than a digital company, we’re your growth partners. From digital marketing and branding to websites, apps, SEO and software solutions, we help brands stand out and scale with performance-driven strategies. Backed by 10+ years of experience and 100+ successful projects.
+                            We’re more than a digital company, we’re your growth partners. From digital marketing and branding to websites, apps, SEO and software solutions, we help brands stand out and scale with performance-driven strategies. Backed by 10+ years of experience and 50+ successful projects.
                         </p>
                     </div>
                     <div className="space-y-6">
                         <p className="text-lg text-white/80 leading-relaxed">
-                            With over <span className="text-white font-black">10 years of experience</span> and <span className="text-white font-black">100+ clients</span>, we focus on measurable growth.
+                            With over <span className="text-white font-black">10 years of experience</span> and <span className="text-white font-black">50+ clients</span>, we focus on measurable growth.
                         </p>
                     </div>
                 </motion.div>

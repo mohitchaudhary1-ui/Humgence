@@ -58,7 +58,7 @@ export default function Header() {
                 <div className="max-w-7xl mx-auto flex justify-between items-center text-white">
                     <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center font-black text-xl tracking-tighter uppercase relative z-[110]">
                         <img src="./logo.png" alt="logo" className="w-8 md:w-10 mr-3" />
-                        <span className="hidden xs:block">HUM<span className="text-[#56c0db]">GENCE</span></span>
+                        <span className="xs:block">HUM<span className="text-[#56c0db]">GENCE</span></span>
                     </Link>
 
                     {/* Menu Toggle */}
