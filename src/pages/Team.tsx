@@ -53,7 +53,7 @@ const team = [
     {
         name: "Edita Kohli",
         role: "Social Media Lead",
-        bio: "Turning ordinary briefs into high-performing, engaging content.",
+        bio: "As the Social Media Lead at Humgence, Edita manages and oversees all social media operations under her leadership. She supervises the team of social media managers, ensuring consistency, discipline, and performance across platforms. From strategy planning and campaign ideation to execution and analytics, she takes complete ownership of brand positioning and digital growth. She also independently handles key clients including Nirvana, Deekay Electronics, and Lakmé, ensuring tailored content strategies and measurable results. With strong creative direction and structured planning, she ensures productivity, accountability, and brand alignment while driving engagement, visibility, and overall digital success for every client under her management..",
         grad: "from-[#56c0db] to-emerald-500",
         image: "/team/edita_humgence.png"
     },
@@ -102,7 +102,7 @@ const team = [
     {
         name: "Sneha",
         role: "Social Media Manager",
-        bio: "Crafting brand stories that connect with the right audience.",
+        bio: "Sneha is the creative force behind Humgence’s digital identity and brand voice. As our Social Media Manager, Content Writer, and Brand Strategist, she leads the way in building brands that connect, convert, and grow with purpose. Her approach blends strategy with storytelling, creativity with clarity, and vision with execution. At Humgence, Sneha doesn’t just create content — she builds brand presence, digital trust, and long-term impact. Every strategy she designs, every campaign she shapes, and every narrative she crafts is rooted in authenticity, consistency, and growth-driven thinking. She transforms ideas into brands and brands into communities.",
         grad: "from-[#56c0db] to-teal-500",
         image: "/team/sneha_humgence.png"
     },

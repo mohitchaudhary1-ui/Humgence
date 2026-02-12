@@ -28,11 +28,8 @@ export default function HumgenceHome() {
         <main className="bg-black text-white overflow-x-hidden">
             <Banner />
             <About />
-            <ClientsSliders />
-            <Work />
-
-
             <Services />
+            <ClientsSliders />
 
             <style jsx global>{`
         @keyframes slow-zoom { 0% { transform: scale(1); } 100% { transform: scale(1.15); } }

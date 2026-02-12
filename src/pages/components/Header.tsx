@@ -54,7 +54,7 @@ export default function Header() {
     return (
         <>
             {/* Header - Added z-[100] to ensure it stays above the menu overlay */}
-            <header className={`fixed top-0 left-0 z-[100] w-full transition-all duration-500 px-6 lg:px-12 ${scrolled || isOpen ? "py-4 bg-black/80 backdrop-blur-md" : "py-8 bg-transparent"}`}>
+            <header className={`fixed top-0 left-0 z-[100] w-full transition-all duration-500 px-6 lg:px-12 py-4 bg-black/80 backdrop-blur-md`}>
                 <div className="max-w-7xl mx-auto flex justify-between items-center text-white">
                     <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center font-black text-xl tracking-tighter uppercase relative z-[110]">
                         <img src="./logo.png" alt="logo" className="w-8 md:w-10 mr-3" />

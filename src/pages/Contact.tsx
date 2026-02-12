@@ -19,7 +19,7 @@ export default function ContactPage() {
                     transition={{ duration: 1 }}
                     className="relative z-10"
                 >
-                    <h2 className="text-[#56c0db] font-bold tracking-[0.4em] uppercase text-[10px] mb-4">Get in Touch</h2>
+                    <h2 className="text-[#56c0db] font-bold tracking-[0.4em] mt-20 uppercase text-[10px] mb-4">Get in Touch</h2>
                     <h1 className="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none mb-6">
                         Start the <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#56c0db] to-slate-400 italic">Conversation.</span>
                     </h1>
