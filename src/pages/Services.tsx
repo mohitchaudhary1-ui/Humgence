@@ -169,7 +169,7 @@ export default function ServicesPage() {
         <div className="bg-[#f8fafc] text-[#1e293b]">
 
             {/* --- HERO SECTION --- */}
-            <section className="relative h-[60vh] flex flex-col justify-center items-center px-6 bg-white border-b border-slate-100 overflow-hidden">
+            <section className="relative bg-[#eee] h-[60vh] flex flex-col justify-center items-center px-6 bg-white border-b border-slate-100 overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
                 <Reveal delay={0.1}>
                     <h1 className="text-6xl md:text-9xl font-black tracking-tighter text-center leading-[0.9]">
@@ -229,7 +229,7 @@ export default function ServicesPage() {
                     <h2 className="text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8">
                         Ready to scale your <br /> digital presence?
                     </h2>
-                    <a href="/contact" className="bg-white text-sky-600 px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all duration-300">
+                    <a href="/contact" className="bg-white text-[#56c0db] px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all duration-300">
                         Work with us
                     </a>
                 </Reveal>

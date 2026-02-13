@@ -90,21 +90,28 @@ export default function Header() {
                     >
                         {/* Background Text - Scaled down for mobile */}
                         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-[0.02] flex items-center justify-center">
-                            <h2 className="text-[30vw] font-black uppercase text-white leading-none rotate-90 lg:rotate-0">HUMGENCE</h2>
+                            <h2 className="text-[20vw] font-black uppercase text-white leading-none rotate-90 lg:rotate-0">HUMGENCE</h2>
                         </div>
 
                         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start lg:items-center relative z-10">
 
                             {/* Navigation Links - Smaller font on mobile to prevent overflow */}
                             <nav className="flex flex-col space-y-2 md:space-y-4">
-                                {["Home", "About", "Services", "Team", "Contact"].map((item, i) => (
-                                    <motion.div key={item} custom={i} variants={linkVariants}>
+                                {[
+                                    { label: "Home", path: "/" },
+                                    { label: "About", path: "/about" },
+                                    { label: "Services", path: "/services" },
+                                    { label: "Team", path: "/team" },
+                                    { label: "Advisory Board", path: "/advisory-board" },
+                                    { label: "Contact", path: "/contact" },
+                                ].map((item, i) => (
+                                    <motion.div key={item.label} custom={i} variants={linkVariants}>
                                         <Link
-                                            to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                                            to={item.path}
                                             onClick={() => setIsOpen(false)}
-                                            className="text-2xl md:text-4xl lg:text-6xl font-black uppercase text-white hover:text-[#56c0db] transition-all duration-300 inline-block"
+                                            className="text-2xl md:text-2xl lg:text-4xl font-black uppercase text-white hover:text-[#56c0db] transition-all duration-300 inline-block"
                                         >
-                                            {item}
+                                            {item.label}
                                         </Link>
                                     </motion.div>
                                 ))}

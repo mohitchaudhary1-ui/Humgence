@@ -11,7 +11,7 @@ const team = [
     {
         name: "Deeksha",
         role: "Operations Lead",
-        bio: "Building the culture and talent that power our success.",
+        bio: "At Humgence, Deeksha Kalra our Operations Head plays a pivotal role in driving structure, strategy, and seamless execution across the organization. With a professional journey that began in 2015, she brings extensive experience in branding, marketing, PR, digital media, and large-scale event management.Her strength lies in transforming vision into well- defined systems, ensuring every project is executed with clarity, efficiency, and measurable impact.She leads cross - functional teams with strong leadership and accountability, aligning creative direction with operational excellence.With a deep understanding of brand positioning and execution dynamics, she ensures that Hungence consistently delivers high - quality experiences, streamlined processes, and sustainable growth across all initiatives.",
         grad: "from-amber-400 to-[#56c0db]",
         image: "/team/deeksha_humgence.png"
     },

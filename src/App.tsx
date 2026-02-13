@@ -7,6 +7,7 @@ import Footer from './pages/components/Footer';
 import Services from './pages/Services';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
+import AdvisoryBoard from './pages/AdvisoryBoard';
 const App: React.FC = () => {
   return (
     <Router>
@@ -20,6 +21,7 @@ const App: React.FC = () => {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/advisory-board" element={<AdvisoryBoard />} />
             <Route path="/contact" element={<Contact />} />
 
             {/* Add more routes here as you build pages */}

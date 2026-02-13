@@ -73,9 +73,9 @@ export default function ContactPage() {
                                 <h3 className="text-white text-xl font-bold uppercase tracking-tight mb-6">Contact Information</h3>
                                 <div className="space-y-6">
                                     {[
-                                        { title: "Email", value: "info@humgence.com", color: "bg-[#56c0db]" },
-                                        { title: "WhatsApp", value: "+91 7508400002", color: "bg-emerald-500" },
-                                        { title: "Office", value: "Ludhiana, Punjab, IN", color: "bg-slate-400" }
+                                        { title: "Email", value: "info@humgence.com", color: "bg-[#56c0db]", link: "mailto:info@humgence.com" },
+                                        { title: "WhatsApp", value: "+91 7508400002", color: "bg-emerald-500", link: "Tel:+91 7508400002" },
+                                        { title: "Office", value: "SCO 140, 4th Floor, Feroze Gandhi Market, Ludhiana, India", color: "bg-slate-400" }
                                     ].map((item, i) => (
                                         <motion.div
                                             key={i}
@@ -85,7 +85,7 @@ export default function ContactPage() {
                                             <p className="text-slate-500 text-[9px] font-bold uppercase tracking-[0.2em] mb-1">{item.title}</p>
                                             <div className="flex items-center gap-3">
                                                 <div className={`w-1 h-3 ${item.color} rounded-full group-hover:h-5 transition-all duration-300`} />
-                                                <p className="text-slate-200 font-medium text-base group-hover:text-[#56c0db] transition-colors">{item.value}</p>
+                                                <a href={item.link} className="text-slate-200 font-medium text-base group-hover:text-[#56c0db] transition-colors">{item.value}</a>
                                             </div>
                                         </motion.div>
                                     ))}
@@ -95,10 +95,19 @@ export default function ContactPage() {
                             <div>
                                 <p className="text-slate-500 text-[9px] font-bold uppercase tracking-[0.2em] mb-4">Connect Socially</p>
                                 <div className="flex flex-wrap gap-3">
-                                    {['LinkedIn', 'Instagram', 'Twitter'].map(s => (
-                                        <span key={s} className="px-4 py-2 rounded-lg bg-white/5 text-slate-300 hover:bg-[#56c0db] hover:text-slate-900 transition-all cursor-pointer font-bold text-[10px] uppercase tracking-widest border border-white/5">
-                                            {s}
-                                        </span>
+                                    {[
+                                        { name: 'Instagram', url: 'https://www.instagram.com/humgence?igsh=eHdnOW94OTQxd2Ny' },
+                                        { name: 'Facebook', url: 'https://www.facebook.com/share/1Fj6sf9MSc/?mibextid=wwXIfr' }
+                                    ].map((social) => (
+                                        <a
+                                            key={social.name}
+                                            href={social.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-4 py-2 rounded-lg bg-white/5 text-slate-300 hover:bg-[#56c0db] hover:text-slate-900 transition-all cursor-pointer font-bold text-[10px] uppercase tracking-widest border border-white/5"
+                                        >
+                                            {social.name}
+                                        </a>
                                     ))}
                                 </div>
                             </div>
