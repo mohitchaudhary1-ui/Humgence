@@ -45,11 +45,10 @@ export default function HomeServices() {
                 </div>
 
                 {/* --- SERVICES GRID --- */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
                     {featuredServices.map((service, i) => (
-                        <a
+                        <div
                             key={i}
-                            href={service.path}
                             className="group relative h-[400px] rounded-[2.5rem] bg-slate-900/40 border border-white/5 overflow-hidden flex flex-col p-8 transition-all duration-500 hover:border-[#56c0db]/40"
                         >
                             {/* Static View - Will hide on hover */}
@@ -77,7 +76,7 @@ export default function HomeServices() {
                                     ))}
                                 </ul>
                             </div>
-                        </a>
+                        </div>
                     ))}
                 </div>
 

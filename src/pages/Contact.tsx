@@ -48,9 +48,8 @@ export default function ContactPage() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="relative z-10"
+                    className="relative z-10 mt-20"
                 >
-                    <h2 className="text-[#56c0db] font-bold tracking-[0.4em] mt-20 uppercase text-[10px] mb-4">Get in Touch</h2>
                     <h1 className="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none mb-6">
                         Start the <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#56c0db] to-slate-400 italic">Conversation.</span>
                     </h1>
@@ -74,8 +73,8 @@ export default function ContactPage() {
                                 <h3 className="text-white text-xl font-bold uppercase tracking-tight mb-6">Contact Information</h3>
                                 <div className="space-y-6">
                                     {[
-                                        { title: "Email", value: "hello@humgence.agency", color: "bg-[#56c0db]" },
-                                        { title: "WhatsApp", value: "+91 98765-43210", color: "bg-emerald-500" },
+                                        { title: "Email", value: "info@humgence.com", color: "bg-[#56c0db]" },
+                                        { title: "WhatsApp", value: "+91 7508400002", color: "bg-emerald-500" },
                                         { title: "Office", value: "Ludhiana, Punjab, IN", color: "bg-slate-400" }
                                     ].map((item, i) => (
                                         <motion.div
@@ -117,48 +116,48 @@ export default function ContactPage() {
                         <form onSubmit={onSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
                             {/* Full Name */}
                             <div className="space-y-2 group">
-                                <label className="text-[10px] font-bold uppercase text-slate-400 tracking-widest ml-1 transition-colors group-focus-within:text-[#56c0db]">Full Name</label>
+                                <label className="text-black text-[10px] font-bold uppercase  tracking-widest ml-1">Full Name</label>
                                 <input
                                     type="text"
                                     name="name"
                                     required
-                                    className="w-full border-b border-slate-200 bg-transparent py-3 focus:outline-none focus:border-[#56c0db] transition-colors text-slate-900 font-semibold placeholder:text-slate-300"
+                                    className="w-full border-b border-black bg-transparent py-3 focus:outline-none focus:border-black transition-colors text-slate-900 font-semibold placeholder:text-slate-300"
                                     placeholder="e.g. John Doe"
                                 />
                             </div>
 
                             {/* Phone */}
                             <div className="space-y-2 group">
-                                <label className="text-[10px] font-bold uppercase text-slate-400 tracking-widest ml-1 transition-colors group-focus-within:text-[#56c0db]">Phone</label>
+                                <label className="text-black text-[10px] font-bold uppercase  tracking-widest ml-1">Phone</label>
                                 <input
                                     type="tel"
                                     name="phone"
                                     required
-                                    className="w-full border-b border-slate-200 bg-transparent py-3 focus:outline-none focus:border-[#56c0db] transition-colors text-slate-900 font-semibold placeholder:text-slate-300"
+                                    className="w-full border-b border-black bg-transparent py-3 focus:outline-none focus:border-black transition-colors text-slate-900 font-semibold placeholder:text-slate-300"
                                     placeholder="e.g. 9876543210"
                                 />
                             </div>
 
                             {/* Email Address */}
                             <div className="md:col-span-2 space-y-2 group">
-                                <label className="text-[10px] font-bold uppercase text-slate-400 tracking-widest ml-1 transition-colors group-focus-within:text-[#56c0db]">Email Address</label>
+                                <label className="text-black text-[10px] font-bold uppercase  tracking-widest ml-1">Email Address</label>
                                 <input
                                     type="email"
                                     name="email"
                                     required
-                                    className="w-full border-b border-slate-200 bg-transparent py-3 focus:outline-none focus:border-[#56c0db] transition-colors text-slate-900 font-semibold placeholder:text-slate-300"
+                                    className="w-full border-b border-black bg-transparent py-3 focus:outline-none focus:border-black transition-colors text-slate-900 font-semibold placeholder:text-slate-300"
                                     placeholder="name@company.com"
                                 />
                             </div>
 
                             {/* Message Brief */}
                             <div className="md:col-span-2 space-y-2 pt-2">
-                                <label className="text-[10px] font-bold uppercase text-slate-400 tracking-widest ml-1">Message Brief</label>
+                                <label className="text-black text-[10px] font-bold uppercase  tracking-widest ml-1">Message Brief</label>
                                 <textarea
                                     name="message"
                                     required
                                     rows={4}
-                                    className="w-full border border-slate-200 rounded-2xl p-5 focus:outline-none focus:border-[#56c0db] focus:ring-4 focus:ring-[#56c0db]/5 transition-all text-slate-900 font-medium placeholder:text-slate-300 resize-none bg-white"
+                                    className="w-full border border-black rounded-2xl p-5 focus:outline-none focus:border-black focus:ring-4 focus:ring-black/5 transition-all text-slate-900 font-medium placeholder:text-slate-300 resize-none bg-white"
                                     placeholder="Describe your project vision..."
                                 ></textarea>
                             </div>

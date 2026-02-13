@@ -192,7 +192,7 @@ export default function ServicesPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {group.items.map((service, i) => (
                                 <Reveal key={i} delay={i * 0.1}>
-                                    <div className="group bg-white p-10 h-full rounded-[2.5rem] border border-slate-200 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:border-sky-200 transition-all duration-500 flex flex-col">
+                                    <div className="group bg-white px-5 py-5 h-full rounded-[2.5rem] border border-slate-200 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:border-sky-200 transition-all duration-500 flex flex-col">
 
                                         <div className="flex">
 
@@ -203,11 +203,11 @@ export default function ServicesPage() {
                                                 </svg>
                                             </div>
 
-                                            <h3 className="text-xl font-bold mt-4 mx-auto text-slate-800 uppercase tracking-tight leading-tight">
+                                            <h3 className="text-xl font-bold mt-4 mx-1 text-slate-800 uppercase tracking-tight leading-tight">
                                                 {service.title}
                                             </h3>
                                         </div>
-                                        <ul className="space-y-4 flex-grow">
+                                        <ul className="space-y-4 flex-grow px-5">
                                             {service.points.map((point, pIdx) => (
                                                 <li key={pIdx} className="flex gap-3 text-sm text-slate-500 leading-relaxed font-medium">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-sky-400 mt-2 shrink-0" />
@@ -229,9 +229,9 @@ export default function ServicesPage() {
                     <h2 className="text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8">
                         Ready to scale your <br /> digital presence?
                     </h2>
-                    <button className="bg-white text-sky-600 px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all duration-300">
+                    <a href="/contact" className="bg-white text-sky-600 px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all duration-300">
                         Work with us
-                    </button>
+                    </a>
                 </Reveal>
             </section>
         </div>
