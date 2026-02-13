@@ -1,34 +1,18 @@
 "use client";
 
-import { motion } from "framer-motion";
 import ClientsSliders from "./components/ClientsSliders";
 import Banner from "./components/Banner";
 import About from "./components/About";
-import Work from "./components/Work";
 import Services from "./components/Services";
+import VideoTestimonials from "./components/Testimonials";
 
-// --- Reusable Animation Variants ---
-const fUp = {
-    off: { opacity: 0, y: 50 },
-    on: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-};
-
-const view = { once: false, amount: 0.2 };
-
-/* ==========================================================
-    HEADER & LOADER 
-   ========================================================== */
-
-
-/* ==========================================================
-    MAIN PAGE
-   ========================================================== */
 export default function HumgenceHome() {
     return (
         <main className="bg-black text-white overflow-x-hidden">
             <Banner />
             <About />
             <Services />
+            <VideoTestimonials />
             <ClientsSliders />
 
             <style jsx global>{`
