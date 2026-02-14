@@ -104,8 +104,6 @@ export default function Header() {
                                     { label: "Services", path: "/services" },
                                     { label: "Team", path: "/team" },
                                     { label: "Clients", path: "/clients" },
-                                    { label: "Testimonials", path: "/testimonials" },
-                                    { label: "Partners", path: "/partners" },
                                     { label: "Contact", path: "/contact" },
                                 ].map((item, i) => (
                                     <motion.div key={item.label} custom={i} variants={linkVariants}>
