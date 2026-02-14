@@ -70,73 +70,75 @@ export default function ClientsPage() {
         c.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
+    // Grid Container Variants
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.08, // Time between each card appearing
+            }
+        }
+    };
+
     return (
         <main className="min-h-screen bg-[#fcfdfe] py-20 px-6 md:px-12 lg:px-24">
             {/* --- HEADER --- */}
             <div className="max-w-7xl mx-auto text-center mb-20">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h1 className="text-5xl md:text-8xl font-black text-slate-900 tracking-tighter leading-none mb-6">
-                        OUR <span className="text-[#56c0db]">NETWORK.</span>
+                    <h1 className="text-6xl md:text-9xl font-black text-slate-900 tracking-tighter leading-none mb-6">
+                        OUR <span className="text-[#56c0db]">CLIENTS</span>
                     </h1>
                     <p className="text-slate-500 font-medium text-lg max-w-2xl mx-auto">
-                        Powering digital transformation for 58+ industry leaders across the globe.
+                        A curated portfolio of 60+ industry giants we are proud to scale.
                     </p>
-                </motion.div>
-
-                {/* --- SEARCH BAR --- */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="mt-12 max-w-md mx-auto relative"
-                >
-                    <input
-                        type="text"
-                        placeholder="Search for a client..."
-                        className="w-full px-6 py-4 rounded-full border border-slate-200 bg-white shadow-sm focus:ring-2 focus:ring-[#56c0db] outline-none transition-all pr-12 text-slate-600"
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                    />
-                    <div className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </div>
                 </motion.div>
             </div>
 
             {/* --- CLIENTS GRID --- */}
             <div className="max-w-7xl mx-auto">
                 <motion.div
-                    layout
-                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8"
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.05 }}
+                    className="grid grid-cols-3 gap-4 md:gap-10"
                 >
                     <AnimatePresence mode="popLayout">
-                        {filteredClients.map((client, index) => (
+                        {filteredClients.map((client) => (
                             <motion.div
                                 layout
                                 key={client.name}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.9 }}
-                                transition={{ duration: 0.4, delay: index * 0.02 }}
+                                whileHover={{
+                                    y: -10,
+                                    scale: 1.02,
+                                    transition: { duration: 0.3 }
+                                }}
                                 className="group relative"
                             >
-                                <div className="bg-white border border-slate-100 rounded-[2rem] p-8 aspect-square flex flex-col items-center justify-center shadow-sm hover:shadow-2xl hover:border-[#56c0db]/20 transition-all duration-500">
-                                    <div className="w-full h-full relative">
+                                <div className="bg-white border border-slate-100 rounded-[2.5rem] p-8 md:p-12 aspect-square flex flex-col items-center justify-center shadow-sm hover:shadow-2xl hover:border-[#56c0db]/10 transition-all duration-500 relative overflow-hidden">
+
+                                    {/* Logo Reveal Animation */}
+                                    <div className="w-full h-full relative z-10">
                                         <img
                                             src={client.logo}
                                             alt={client.name}
-                                            className="w-full h-full object-contain filter transition-all duration-700"
+                                            className="w-full h-full object-contain"
                                             onError={(e) => { e.currentTarget.src = "https://via.placeholder.com/200x100?text=Logo"; }}
                                         />
                                     </div>
 
-                                    {/* Name Badge - Appears on Hover */}
-                                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 transition-opacity duration-300">
-                                        <span className="bg-slate-900 text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full whitespace-nowrap">
+                                    {/* Background Shine Effect */}
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[#56c0db]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -rotate-45 translate-x-full group-hover:translate-x-[-100%]" />
+
+                                    {/* Name Badge */}
+                                    <div className="absolute bottom-6  transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                        <span className="bg-slate-900 text-white text-[9px] font-black uppercase tracking-[0.25em] px-5 py-2 rounded-full shadow-lg">
                                             {client.name}
                                         </span>
                                     </div>
@@ -148,27 +150,10 @@ export default function ClientsPage() {
 
                 {/* --- EMPTY STATE --- */}
                 {filteredClients.length === 0 && (
-                    <div className="text-center py-20 text-slate-400 font-bold uppercase tracking-widest">
-                        No clients found matching your search.
+                    <div className="text-center py-32 text-slate-300 font-bold uppercase tracking-widest text-sm">
+                        No match found for "{searchTerm}"
                     </div>
                 )}
-            </div>
-
-            {/* --- STATS FOOTER --- */}
-            <div className="max-w-7xl mx-auto mt-32 pt-20 border-t border-slate-100 text-center">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-                    {[
-                        { label: "Total Clients", val: "58+" },
-                        { label: "Success Rate", val: "99%" },
-                        { label: "Global Reach", val: "12 countries" },
-                        { label: "Repeat Business", val: "85%" },
-                    ].map((stat, i) => (
-                        <div key={i}>
-                            <h4 className="text-3xl font-black text-slate-900">{stat.val}</h4>
-                            <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mt-1">{stat.label}</p>
-                        </div>
-                    ))}
-                </div>
             </div>
         </main>
     );
