@@ -1,20 +1,74 @@
+"use client";
 import { motion } from "framer-motion";
 
+// This array now contains all your unique logos from the public/clients folder
 const clients = [
-    { name: "EastWood", logo: "./clients/eastwood.webp" },
-    { name: "KB Infra", logo: "./clients/kb_infra.webp" },
-    { name: "Malhotra", logo: "./clients/malhotra.webp" },
-    { name: "The Cambium", logo: "./clients/the_cambium.webp" },
-    { name: "The Wilton", logo: "./clients/the_wilton.webp" },
+    { name: "Alpha", logo: "/clients/alpha.jpg" },
+    { name: "Amar", logo: "/clients/amar.jpg" },
+    { name: "Ambrosia", logo: "/clients/ambrosia.jpg" },
+    { name: "Arrow", logo: "/clients/arrow.jpg" },
+    { name: "Best", logo: "/clients/best.jpg" },
+    { name: "Blaze", logo: "/clients/blaze.jpg" },
+    { name: "BNI", logo: "/clients/bni.jpg" },
+    { name: "Brew", logo: "/clients/brew.jpg" },
+    { name: "Burger", logo: "/clients/burger.jpg" },
+    { name: "Club", logo: "/clients/club.jpg" },
+    { name: "DK", logo: "/clients/dk.jpg" },
+    { name: "DM", logo: "/clients/dm.jpg" },
+    { name: "DPS", logo: "/clients/dps.jpg" },
+    { name: "DT", logo: "/clients/dt.jpg" },
+    { name: "Elamora", logo: "/clients/elamora.jpg" },
+    { name: "General", logo: "/clients/general.jpg" },
+    { name: "Glued", logo: "/clients/glued.jpg" },
+    { name: "Gourmet", logo: "/clients/gourmet.jpg" },
+    { name: "Grand", logo: "/clients/grand.jpg" },
+    { name: "Grey", logo: "/clients/grey.jpg" },
+    { name: "HK", logo: "/clients/hk.jpg" },
+    { name: "Imperial", logo: "/clients/imperial.jpg" },
+    { name: "Kanika", logo: "/clients/kanika.jpg" },
+    { name: "Kashmir", logo: "/clients/kashmir.jpg" },
+    { name: "KB", logo: "/clients/kb.jpg" },
+    { name: "KK", logo: "/clients/kk.jpg" },
+    { name: "Lakehouse", logo: "/clients/lakehouse.jpg" },
+    { name: "Lakme", logo: "/clients/lakme.jpg" },
+    { name: "Lifecare", logo: "/clients/lifecare.jpg" },
+    { name: "Lumen", logo: "/clients/lumen.jpg" },
+    { name: "Maljotra", logo: "/clients/maljotra.jpg" },
+    { name: "Modern", logo: "/clients/mdern.jpg" },
+    { name: "Mehak", logo: "/clients/mehak.jpg" },
+    { name: "Miami", logo: "/clients/miami.jpg" },
+    { name: "Mindful", logo: "/clients/mindful.jpg" },
+    { name: "Moti", logo: "/clients/moti.jpg" },
+    { name: "MPRO", logo: "/clients/mpro.jpg" },
+    { name: "M Square", logo: "/clients/msquare.jpg" },
+    { name: "Nanda", logo: "/clients/nanda.jpg" },
+    { name: "Nirwana", logo: "/clients/nirwana.jpg" },
+    { name: "Papa Jow", logo: "/clients/papa jow.jpg" },
+    { name: "Punfun", logo: "/clients/punfun.jpg" },
+    { name: "Punjoy", logo: "/clients/punjoy.jpg" },
+    { name: "Rzeka", logo: "/clients/rzeka.jpg" },
+    { name: "Sharman", logo: "/clients/sharman.jpg" },
+    { name: "Singla", logo: "/clients/singla.jpg" },
+    { name: "Skinrise", logo: "/clients/skinrise.jpg" },
+    { name: "Techno", logo: "/clients/techno.jpg" },
+    { name: "Terace", logo: "/clients/terace.jpg" },
+    { name: "Terra", logo: "/clients/terra.jpg" },
+    { name: "Thukral", logo: "/clients/thukral.jpg" },
+    { name: "Vidya", logo: "/clients/vidya.jpg" },
+    { name: "Vision", logo: "/clients/vision.jpg" },
+    { name: "Vybe", logo: "/clients/vybe.jpg" },
+    { name: "Welkin Heights", logo: "/clients/welkin heights.jpg" },
+    { name: "Wilton", logo: "/clients/wilton.jpg" },
+    { name: "Zapp", logo: "/clients/zapp.jpg" },
+    { name: "Sangh", logo: "/clients/sangh.jpeg" },
 ];
 
-export default function ClientSlider() {
-    // Triple the array to ensure no gaps on wide desktop screens
-    const sliderItems = [...clients, ...clients, ...clients];
+// Double the array to create a seamless loop
+const sliderItems = [...clients, ...clients];
 
+export default function IndustryGiants() {
     return (
         <section className="py-24 bg-[#f1f5f9] overflow-hidden relative">
-            {/* Decorative header */}
             <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -23,27 +77,26 @@ export default function ClientSlider() {
                     transition={{ duration: 0.6 }}
                 >
                     <span className="text-[#55c0dc] font-bold tracking-[0.2em] text-xs uppercase">
-                        Our Trusted Partners
+                        Our Trusted Clients
                     </span>
                     <h2 className="text-3xl md:text-5xl font-black text-slate-800 mt-3 mb-4">
                         Working with the <span className="text-[#55c0dc]">Industry Giants</span>
                     </h2>
-                    <div className="w-24 h-1 bg-sky-500 mx-auto rounded-full" />
+                    <div className="w-24 h-1 bg-[#55c0dc] mx-auto rounded-full" />
                 </motion.div>
             </div>
 
-            {/* Slider Container */}
-            <div className="relative">
-                {/* Soft edge fades for light mode */}
-                <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#f1f5f9] to-transparent z-10 pointer-events-none" />
-                <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#f1f5f9] to-transparent z-10 pointer-events-none" />
+            <div className="relative flex">
+                {/* Gradient Fades for visual polish */}
+                <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#f1f5f9] to-transparent z-10" />
+                <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#f1f5f9] to-transparent z-10" />
 
                 <motion.div
                     className="flex gap-8"
-                    animate={{ x: ["0%", "-33.33%"] }} // Changed to 33% because we tripled the list
+                    animate={{ x: ["0%", "-50%"] }} // Slides through exactly one full set of the 58 logos
                     transition={{
                         repeat: Infinity,
-                        duration: 5, // Adjust speed here (higher = slower)
+                        duration: 60, // Slower duration (60s) because there are 58 items now
                         ease: "linear",
                     }}
                 >
@@ -52,25 +105,19 @@ export default function ClientSlider() {
                             key={index}
                             className="flex-shrink-0 group flex flex-col items-center gap-4"
                         >
-                            {/* Logo Card */}
-                            <div className="w-48 h-28 md:w-64 md:h-36 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center p-6 transition-all duration-300 group-hover:shadow-xl group-hover:border-sky-200 group-hover:-translate-y-2">
+                            <div className="w-40 h-24 md:w-52 md:h-32 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center p-6 transition-all duration-300 group-hover:shadow-xl group-hover:border-[#55c0dc]/30 group-hover:-translate-y-1">
                                 <img
                                     src={client.logo}
                                     alt={client.name}
-                                    className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                                    className="w-full h-full object-contain filter transition-all duration-500"
                                     onError={(e) => {
-                                        e.currentTarget.src = "https://via.placeholder.com/200x100?text=Logo+Missing";
+                                        e.currentTarget.src = "https://via.placeholder.com/200x100?text=Logo";
                                     }}
                                 />
                             </div>
-
-                            {/* Client Name Label */}
-                            <div className="text-center">
-                                <p className="text-slate-700 font-bold uppercase tracking-widest text-[11px] md:text-xs group-hover:text-sky-600 transition-colors">
-                                    {client.name}
-                                </p>
-                                <div className="h-0.5 w-0 group-hover:w-full bg-sky-400 mx-auto transition-all duration-300 mt-1" />
-                            </div>
+                            <p className="text-slate-400 font-bold uppercase tracking-[0.2em] text-[9px] group-hover:text-[#55c0dc] transition-colors">
+                                {client.name}
+                            </p>
                         </div>
                     ))}
                 </motion.div>

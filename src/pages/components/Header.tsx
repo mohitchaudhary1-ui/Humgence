@@ -100,16 +100,19 @@ export default function Header() {
                                 {[
                                     { label: "Home", path: "/" },
                                     { label: "About", path: "/about" },
+                                    { label: "Advisory Board", path: "/advisory-board" },
                                     { label: "Services", path: "/services" },
                                     { label: "Team", path: "/team" },
-                                    { label: "Advisory Board", path: "/advisory-board" },
+                                    { label: "Clients", path: "/clients" },
+                                    { label: "Testimonials", path: "/testimonials" },
+                                    { label: "Partners", path: "/partners" },
                                     { label: "Contact", path: "/contact" },
                                 ].map((item, i) => (
                                     <motion.div key={item.label} custom={i} variants={linkVariants}>
                                         <Link
                                             to={item.path}
                                             onClick={() => setIsOpen(false)}
-                                            className="text-2xl md:text-2xl lg:text-4xl font-black uppercase text-white hover:text-[#56c0db] transition-all duration-300 inline-block"
+                                            className="text-1xl md:text-1xl lg:text-2xl font-black uppercase text-white hover:text-[#56c0db] transition-all duration-300 inline-block"
                                         >
                                             {item.label}
                                         </Link>

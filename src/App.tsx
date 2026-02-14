@@ -8,6 +8,8 @@ import Services from './pages/Services';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
 import AdvisoryBoard from './pages/AdvisoryBoard';
+import Clients from './pages/Clients';
+
 const App: React.FC = () => {
   return (
     <Router>
@@ -20,6 +22,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/clients" element={<Clients />} />
             <Route path="/team" element={<Team />} />
             <Route path="/advisory-board" element={<AdvisoryBoard />} />
             <Route path="/contact" element={<Contact />} />
