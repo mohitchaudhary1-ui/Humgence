@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Testimonials from "./components/Testimonials";
+import Partners from "./components/Partners";
 
 const clients = [
     { name: "Alpha power", logo: "/clients/alpha.jpg" },
@@ -88,8 +89,7 @@ export default function ClientsPage() {
             <div className="max-w-7xl mx-auto">
                 <Testimonials />
                 <motion.div
-                    className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10 mx-10"
-                >
+                    className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10 mx-10">
                     <AnimatePresence mode="popLayout">
                         {filteredClients.map((client) => (
                             <motion.div
@@ -136,6 +136,7 @@ export default function ClientsPage() {
                     </div>
                 )}
             </div>
+            <Partners />
         </main>
     );
 }
