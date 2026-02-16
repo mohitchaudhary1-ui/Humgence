@@ -62,7 +62,9 @@ const team = [
         role: "Social Media Lead",
         bio: "As the Social Media Lead at Humgence, Edita manages and oversees all social media operations under her leadership. She supervises the team of social media managers, ensuring consistency, discipline, and performance across platforms. From strategy planning and campaign ideation to execution and analytics, she takes complete ownership of brand positioning and digital growth. She also independently handles key clients including Nirvana, Deekay Electronics, and Lakmé, ensuring tailored content strategies and measurable results. With strong creative direction and structured planning, she ensures productivity, accountability, and brand alignment while driving engagement, visibility, and overall digital success for every client under her management..",
         grad: "from-[#56c0db] to-emerald-500",
-        image: "/team/edita_humgence.png"
+        image: "/team/edita_humgence.png",
+        video: "/team/videos/edita.mp4"
+
     },
     {
         name: "Sehaj Singh Saggu",
@@ -100,7 +102,9 @@ const team = [
         role: "Event Planner & Manager",
         bio: "From setup to showtime, ensures every event runs smoothly.",
         grad: "from-emerald-500 to-[#56c0db]",
-        image: "/team/hardik_humgence.png"
+        image: "/team/hardik_humgence.png",
+        video: "/team/videos/hardik.mp4"
+
     },
     {
         name: "Ishvir Singh",
