@@ -7,6 +7,37 @@ export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
+    // Meta Pixel Script Injection
+    useEffect(() => {
+        const pixelId = '1309300884362611';
+
+        // Inject Script
+        if (!window.fbq) {
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return; n = f.fbq = function () {
+                    n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                n.queue = []; t = b.createElement(e); t.async = !0;
+                t.src = v; s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', pixelId);
+            fbq('track', 'PageView');
+        }
+
+        // Inject Noscript Fallback to Head
+        if (!document.getElementById('fb-pixel-noscript')) {
+            const noscript = document.createElement('noscript');
+            noscript.id = 'fb-pixel-noscript';
+            noscript.innerHTML = `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1" />`;
+            document.head.appendChild(noscript);
+        }
+    }, []);
+
+
     useEffect(() => {
         const timer = setTimeout(() => setLoading(false), 1000);
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -103,7 +134,7 @@ export default function Header() {
                                     { label: "Advisory Board", path: "/advisory-board" },
                                     { label: "Services", path: "/services" },
                                     { label: "Team", path: "/team" },
-                                    { label: "Clients and Partners", path: "/clients" },
+                                    { label: "Clients", path: "/clients" },
                                     { label: "Contact", path: "/contact" },
                                 ].map((item, i) => (
                                     <motion.div key={item.label} custom={i} variants={linkVariants}>
