@@ -45,7 +45,7 @@ export default function Partnerships() {
                             Global Ecosystem
                         </span>
                         <h2 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter uppercase">
-                            Our <span className="text-[#56c0db] italic">Partnerships.</span>
+                            Our <span className="text-[#56c0db] italic">Partners.</span>
                         </h2>
                     </motion.div>
 

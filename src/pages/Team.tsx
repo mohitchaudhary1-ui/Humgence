@@ -175,7 +175,7 @@ export default function PerfectTeamGrid() {
                     <h1 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9]">
                         Meet the <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#56c0db] via-white to-[#56c0db] animate-gradient-x">
-                            Visionaries.
+                            Team.
                         </span>
                     </h1>
                 </motion.div>

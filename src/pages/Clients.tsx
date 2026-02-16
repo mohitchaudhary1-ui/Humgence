@@ -87,7 +87,6 @@ export default function ClientsPage() {
         <main className="min-h-screen bg-[#fcfdfe]">
             {/* --- CLIENTS GRID --- */}
             <div className="max-w-7xl mx-auto">
-                <Testimonials />
                 <motion.div
                     className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10 mx-10">
                     <AnimatePresence mode="popLayout">
@@ -135,6 +134,7 @@ export default function ClientsPage() {
                         No match found for "{searchTerm}"
                     </div>
                 )}
+                <Testimonials />
             </div>
             <Partners />
         </main>
