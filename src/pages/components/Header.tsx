@@ -13,7 +13,7 @@ export default function Header() {
 
         // Inject Script
         if (!window.fbq) {
-            (function (f, b, e, v, n, t, s) {
+            !function (f, b, e, v, n, t, s) {
                 if (f.fbq) return; n = f.fbq = function () {
                     n.callMethod ?
                         n.callMethod.apply(n, arguments) : n.queue.push(arguments)
@@ -22,7 +22,7 @@ export default function Header() {
                 n.queue = []; t = b.createElement(e); t.async = !0;
                 t.src = v; s = b.getElementsByTagName(e)[0];
                 s.parentNode.insertBefore(t, s)
-            })(window, document, 'script',
+            }(window, document, 'script',
                 'https://connect.facebook.net/en_US/fbevents.js');
             fbq('init', pixelId);
             fbq('track', 'PageView');
@@ -134,7 +134,7 @@ export default function Header() {
                                     { label: "Advisory Board", path: "/advisory-board" },
                                     { label: "Services", path: "/services" },
                                     { label: "Team", path: "/team" },
-                                    { label: "Clients", path: "/clients" },
+                                    { label: "Clients and Partners", path: "/clients" },
                                     { label: "Contact", path: "/contact" },
                                 ].map((item, i) => (
                                     <motion.div key={item.label} custom={i} variants={linkVariants}>
@@ -156,11 +156,14 @@ export default function Header() {
                                 transition={{ delay: 0.5 }}
                                 className="lg:border-l lg:border-white/10 lg:pl-16 space-y-8 md:space-y-12"
                             >
-                                <div className="hidden xs:block">
+                                <div className="xs:block">
                                     <h4 className="text-[10px] tracking-[0.5em] uppercase font-black text-[#56c0db] mb-4">Address</h4>
-                                    <p className="text-lg md:text-2xl text-white/80 font-medium leading-relaxed">
-                                        SCO 17, 18 Model Town Extension,<br />
+                                    <p className="text-[10px] md:text-2xl text-white/80 font-medium leading-relaxed">
+                                        India : SCO 17, 18 Model Town Extension,<br />
                                         Ludhiana, India
+                                    </p>
+                                    <p className="text-[10px] md:text-2xl text-white/80 font-medium leading-relaxed">
+                                        Dubai : AlKazim Tower, Business Central, Dubai Internet City, Sheikh Zayed Road, Dubai, UAE
                                     </p>
                                 </div>
 

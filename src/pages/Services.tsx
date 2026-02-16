@@ -233,7 +233,34 @@ export default function ServicesPage() {
                         { label: "Interactive Hotspots", desc: "Info-points that allow users to click and buy or book directly within the tour." }
                     ],
                     icon: "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                }
+                },
+                {
+                    title: "Professional Shoot",
+                    intro: "In a digital-first world, your imagery is your first impression. We provide end-to-end photo and video production that bridges the gap between high-art aesthetics and high-performance marketing.",
+                    details: [
+                        {
+                            label: "Cinema-Grade Production",
+                            desc: "Fashion, product, and corporate photography using 4K cinematic video to establish authority and trust."
+                        },
+                        {
+                            label: "Marketing-Ready Creatives",
+                            desc: "Vertical-first content for Reels and TikTok, designed with hooks to drive high click-through rates for ads."
+                        },
+                        {
+                            label: "Logistics & Set Design",
+                            desc: "Managing indoor studio setups and on-location lifestyle shoots, including professional styling and coordination."
+                        },
+                        {
+                            label: "Post-Production Magic",
+                            desc: "Cinematic color grading, high-end retouching, and sound design that meets international premium standards."
+                        },
+                        {
+                            label: "Visual Storytelling",
+                            desc: "Narrative-driven content starting from storyboards that align with your Brand Bible and growth roadmap."
+                        }
+                    ],
+                    icon: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                },
             ]
         }
     ];
