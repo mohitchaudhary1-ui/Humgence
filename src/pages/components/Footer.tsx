@@ -66,22 +66,41 @@ const Footer = () => {
                                     <i className="far fa-envelope"></i>
                                 </div>
                                 <a href="mailto:hello@agency.com" className="hover:text-[#56c0db] transition-colors text-sm font-medium">
-                                    info@humgence.com                                </a>
+                                    Gmail : info@humgence.com
+                                </a>
                             </li>
                             <li className="flex items-center gap-4 group">
                                 <div className="text-[#56c0db] text-lg rotate-90">
                                     <i className="fas fa-phone-alt"></i>
                                 </div>
                                 <a href="tel:+15551234567" className="hover:text-[#56c0db] transition-colors text-sm font-medium">
-                                    +91 7508400002
+                                    India : +91 7508400002
                                 </a>
+                            </li>
+                            <li className="flex items-center gap-4 group">
+                                <div className="text-[#56c0db] text-lg rotate-90">
+                                    <i className="fas fa-phone-alt"></i>
+                                </div>
+                                <a href="tel:+15551234567" className="hover:text-[#56c0db] transition-colors text-sm font-medium">
+                                    Dubai :  +971 585066985
+                                </a>
+                            </li>
+                            <li
+                                className="flex items-center gap-4 group">
+                                <div className="text-[#56c0db] text-lg">
+                                    <i className="fas fa-map-marker-alt"></i>
+                                </div>
+                                <span className="text-sm font-medium">
+                                    India : SCO 140, 4th Floor, Feroze Gandhi Market, Ludhiana, India
+
+                                </span>
                             </li>
                             <li className="flex items-center gap-4 group">
                                 <div className="text-[#56c0db] text-lg">
                                     <i className="fas fa-map-marker-alt"></i>
                                 </div>
                                 <span className="text-sm font-medium">
-                                    SCO 140, 4th Floor, Feroze Gandhi Market, Ludhiana, India
+                                    Dubai : AlKazim Tower, Business Central, Dubai Internet City, Sheikh Zayed Road, Dubai, UAE
 
                                 </span>
                             </li>

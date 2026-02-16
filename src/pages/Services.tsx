@@ -63,7 +63,8 @@ export default function ServicesPage() {
                         "UI/UX focused design",
                         "Fast loading & SEO-ready structure",
                         "Custom business websites & landing pages",
-                        "Easy backend management"
+                        "Easy backend management",
+                        "Shopify Store",
                     ],
                     icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                 },
@@ -84,7 +85,8 @@ export default function ServicesPage() {
                         "Audience targeting & retargeting",
                         "Creative ad copies & visuals",
                         "Budget optimisation",
-                        "Real-time performance tracking"
+                        "Real-time performance tracking",
+                        "Search Engine Optimization (SEO)"
                     ],
                     icon: "M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
                 }

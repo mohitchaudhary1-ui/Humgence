@@ -86,7 +86,7 @@ export default function AboutPage() {
                         className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 pt-20 border-t border-slate-100"
                     >
                         {[
-                            { label: "Happy Clients", value: "50+" },
+                            { label: "Happy Clients", value: "60+" },
                             { label: "Impressions Generated", value: "15M+" },
                             { label: "Success Rate", value: "97%" },
                             { label: "Years Experience", value: "10+" }
@@ -159,7 +159,7 @@ export default function AboutPage() {
                                 <div className="flex items-center gap-3">
                                     <div className="w-1 h-8 bg-[#56c0db] rounded-full" />
                                     <div>
-                                        <p className="text-[#56c0db] text-[10px] font-black uppercase tracking-widest leading-none">Founder & CEO</p>
+                                        <p className="text-[#56c0db] text-[10px] font-black uppercase tracking-widest leading-none">Founder</p>
                                         <p className="text-slate-900 font-black text-base mt-1">Mohit Chaudhary</p>
                                     </div>
                                 </div>

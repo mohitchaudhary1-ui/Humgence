@@ -164,7 +164,6 @@ export default function ContactPage() {
                                 <label className="text-black text-[10px] font-bold uppercase  tracking-widest ml-1">Message Brief</label>
                                 <textarea
                                     name="message"
-                                    required
                                     rows={4}
                                     className="w-full border border-black rounded-2xl p-5 focus:outline-none focus:border-black focus:ring-4 focus:ring-black/5 transition-all text-slate-900 font-medium placeholder:text-slate-300 resize-none bg-white"
                                     placeholder="Describe your project vision..."
