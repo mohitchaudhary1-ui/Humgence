@@ -4,27 +4,69 @@ import { motion } from "framer-motion";
 const partners = [
     {
         name: "Google",
-        logo: "https://www.vectorlogo.zone/logos/google/google-ar21.svg",
+        logo: "https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg",
         desc: "Strategic Partner for Cloud Infrastructure & AI Integration.",
         color: "#4285F4"
     },
     {
         name: "Meta",
-        logo: "https://www.vectorlogo.zone/logos/facebook/facebook-ar21.svg",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg",
         desc: "Expertise in Social Integration & Advanced Ad-Tech Solutions.",
         color: "#0668E1"
     },
     {
         name: "AWS",
-        logo: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
         desc: "Certified Consulting for Scalable Serverless Architectures.",
         color: "#FF9900"
     },
     {
         name: "Adobe",
-        logo: "https://www.vectorlogo.zone/logos/adobe/adobe-ar21.svg",
+        logo: "https://www.adobe.com/federal/assets/svgs/adobe-logo.svg",
         desc: "Solution Partner for Digital Experience & Creative Workflows.",
         color: "#FF0000"
+    },
+    {
+        name: "Microsoft",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_(2012).svg",
+        desc: "Enterprise solutions for Cloud computing and Productivity.",
+        color: "#737373"
+    },
+    {
+        name: "ChatGPT",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+        desc: "Pioneering LLM integration for conversational AI experiences.",
+        color: "#74aa9c"
+    },
+    {
+        name: "Gemini",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg",
+        desc: "Next-gen multimodal AI for advanced problem solving.",
+        color: "#8E75FF"
+    },
+    {
+        name: "Notebook LM",
+        logo: "https://notebooklm.google/_/static/branding/v4/light_mode/notebook-logo.svg",
+        desc: "Grounded AI research assistant for document synthesis.",
+        color: "#1a73e8"
+    },
+    {
+        name: "Perplexity",
+        logo: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/perplexity-ai-icon.png",
+        desc: "Direct-to-answer AI engine for real-time information.",
+        color: "#20B2AA"
+    },
+    {
+        name: "WhatsApp",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+        desc: "Global communication partner for business messaging.",
+        color: "#25D366"
+    },
+    {
+        name: "Envato",
+        logo: "https://assets.elements.envato.com/apps/storefront/EnvatoLogoDark-d7fdce89d7315fa71e83.svg",
+        desc: "Creative assets partner for high-end digital production.",
+        color: "#81B441"
     }
 ];
 export default function Partnerships() {
@@ -69,7 +111,6 @@ export default function Partnerships() {
                             viewport={{ once: false }}
                             transition={{
                                 duration: 0.8,
-                                delay: index * 0.2,
                                 type: "spring",
                                 bounce: 0.4
                             }}
