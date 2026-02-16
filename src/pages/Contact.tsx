@@ -134,7 +134,7 @@ export default function ContactPage() {
                                     placeholder="e.g. John Doe"
                                 />
                             </div>
-
+                            <input type="hidden" name="redirect" value="https://humgence.com/thankyou" />
                             {/* Phone */}
                             <div className="space-y-2 group">
                                 <label className="text-black text-[10px] font-bold uppercase  tracking-widest ml-1">Phone</label>

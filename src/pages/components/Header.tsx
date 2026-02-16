@@ -13,7 +13,7 @@ export default function Header() {
 
         // Inject Script
         if (!window.fbq) {
-            !function (f, b, e, v, n, t, s) {
+            (function (f, b, e, v, n, t, s) {
                 if (f.fbq) return; n = f.fbq = function () {
                     n.callMethod ?
                         n.callMethod.apply(n, arguments) : n.queue.push(arguments)
@@ -22,7 +22,7 @@ export default function Header() {
                 n.queue = []; t = b.createElement(e); t.async = !0;
                 t.src = v; s = b.getElementsByTagName(e)[0];
                 s.parentNode.insertBefore(t, s)
-            }(window, document, 'script',
+            })(window, document, 'script',
                 'https://connect.facebook.net/en_US/fbevents.js');
             fbq('init', pixelId);
             fbq('track', 'PageView');

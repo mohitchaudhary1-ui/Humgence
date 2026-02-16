@@ -9,6 +9,7 @@ import Team from './pages/Team';
 import Contact from './pages/Contact';
 import AdvisoryBoard from './pages/AdvisoryBoard';
 import Clients from './pages/Clients';
+import ThankYou from './pages/Thankyou';
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: React.FC = () => {
             <Route path="/team" element={<Team />} />
             <Route path="/advisory-board" element={<AdvisoryBoard />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/thankyou" element={<ThankYou />} />
 
             {/* Add more routes here as you build pages */}
           </Routes>
