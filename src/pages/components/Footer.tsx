@@ -1,7 +1,35 @@
 "use client";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+
+    useEffect(() => {
+        // --- GOOGLE TAG MANAGER (NOSCRIPT) INJECTION ---
+        const gtmId = 'GTM-N9R32SJ6';
+
+        // Check if the noscript already exists to avoid duplicates
+        if (!document.getElementById('gtm-noscript')) {
+            const noscript = document.createElement('noscript');
+            noscript.id = 'gtm-noscript';
+
+            // Create the iframe element
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.googletagmanager.com/ns.html?id=${gtmId}`;
+            iframe.height = "0";
+            iframe.width = "0";
+            iframe.style.display = "none";
+            iframe.style.visibility = "hidden";
+
+            noscript.appendChild(iframe);
+
+            // Google recommends placing this immediately after the opening <body> tag
+            document.body.insertBefore(noscript, document.body.firstChild);
+        }
+        // --- END GTM INJECTION ---
+
+        // ... your existing scroll and loading logic
+    }, []);
     return (
         <footer className="bg-black text-white text-bold py-16 px-6 md:px-12">
             <div className="max-w-7xl mx-auto">

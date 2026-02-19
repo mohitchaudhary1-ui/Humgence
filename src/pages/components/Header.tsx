@@ -7,6 +7,25 @@ export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
+
+    // Google Tag Manager Script Injection
+    useEffect(() => {
+        const gtmId = 'GTM-N9R32SJ6';
+
+        // Check if GTM is already loaded to prevent duplicates
+        if (!window.dataLayer) {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', gtmId);
+        }
+    }, []);
     // Meta Pixel Script Injection
     useEffect(() => {
         const pixelId = '1309300884362611';
