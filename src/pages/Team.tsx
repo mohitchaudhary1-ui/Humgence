@@ -95,7 +95,8 @@ const team = [
         role: "Video Editor",
         bio: "Gurinder Singh plays a vital role in shaping our visual storytelling as a Video Editor and Motion Graphics Artist at Humgence. His ability to transform ideas into refined, engaging visuals has consistently elevated the quality and impact of our content. With a strong sense of timing, detail, and creative direction, he has contributed to multiple high-performing campaigns and brand narratives. Gurinder’s dedication, consistency, and commitment to excellence reflect in every project he delivers. His performance continues to strengthen our creative standards, making him a valuable contributor to our growth and an important force behind our evolving visual identity.",
         grad: "from-[#56c0db] to-slate-600",
-        image: "/team/gurinder_humgence.png"
+        image: "/team/gurinder_humgence.png",
+        video: "/team/videos/Garry.mp4"
     },
     {
         name: "Armaan Singh",
