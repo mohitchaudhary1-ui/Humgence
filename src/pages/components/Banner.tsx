@@ -18,6 +18,15 @@ export default function Banner() {
                     <p className="text-lg md:text-xl max-w-xl font-light text-white/70 uppercase tracking-[0.2em]">
                         Global Creative Agency Driving Digital Revolution.
                     </p>
+                    <a
+                        href="/contact"
+                        className="inline-flex items-center gap-3 mt-8 px-10 py-4 rounded-full bg-[#56c0db] text-black font-black text-xs uppercase tracking-[0.3em] hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg shadow-[#56c0db]/30"
+                    >
+                        Get In Touch
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                            <path d="M5 12h14m-7-7l7 7-7 7" />
+                        </svg>
+                    </a>
                 </motion.div>
             </div>
         </section>

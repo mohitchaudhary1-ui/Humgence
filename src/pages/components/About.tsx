@@ -36,6 +36,15 @@ export default function AboutSection() {
                             With over <span className="text-white font-black">10 years of experience</span> and <span className="text-white font-black">50+ clients</span>, we focus on measurable growth.
                         </p>
                     </div>
+                    <a
+                        href="/contact"
+                        className="inline-flex items-center gap-3 mt-6 px-10 py-4 rounded-full bg-black text-white font-black text-xs uppercase tracking-[0.3em] hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 shadow-lg shadow-black/30"
+                    >
+                        Let's Talk
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                            <path d="M5 12h14m-7-7l7 7-7 7" />
+                        </svg>
+                    </a>
                 </motion.div>
             </div>
         </section>

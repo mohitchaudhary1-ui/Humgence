@@ -123,6 +123,18 @@ export default function IndustryGiants() {
                     ))}
                 </motion.div>
             </div>
+
+            <div className="flex justify-center mt-16">
+                <a
+                    href="/contact"
+                    className="inline-flex items-center gap-3 px-12 py-5 rounded-full bg-[#55c0dc] text-white font-black text-xs uppercase tracking-[0.3em] hover:bg-slate-800 hover:scale-105 transition-all duration-300 shadow-lg shadow-[#55c0dc]/30"
+                >
+                    Start Your Project
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <path d="M5 12h14m-7-7l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
         </section>
     );
 }

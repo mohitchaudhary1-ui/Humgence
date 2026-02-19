@@ -52,7 +52,7 @@ export default function ContactPage() {
                     className="relative z-10 mt-20"
                 >
                     <h1 className="text-4xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none mb-3">
-                        Start the <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#56c0db] to-slate-400 italic">Conversation.</span>
+                        Book Free <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#56c0db] to-slate-400 italic">Consultation.</span>
                     </h1>
                 </motion.div>
             </section>
