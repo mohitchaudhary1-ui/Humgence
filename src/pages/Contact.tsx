@@ -27,6 +27,7 @@ export default function ContactPage() {
             setResult("Form Submitted Successfully");
             setIsSubmitting(false);
             event.target.reset();
+            window.location.href = "/thankyou";
         } else {
             console.log("Error", data);
             setResult(data.message);

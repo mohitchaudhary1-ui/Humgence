@@ -18,7 +18,7 @@ export default function ThankYou() {
                 <h2 className="text-[25vw] font-black uppercase text-white leading-none">SUCCESS</h2>
             </div>
 
-            <div className="max-w-2xl w-full text-center relative z-10">
+            <div className="max-w-2xl w-full text-center relative z-10 mt-20">
                 <motion.div
                     initial={{ scale: 0.5, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
