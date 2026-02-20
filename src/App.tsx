@@ -10,10 +10,24 @@ import Contact from './pages/Contact';
 import AdvisoryBoard from './pages/AdvisoryBoard';
 import Clients from './pages/Clients';
 import ThankYou from './pages/Thankyou';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+
+const ScrollToTop: React.FC = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const App: React.FC = () => {
+
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen text-white selection:bg-[#56c0db] selection:text-white bg-[#0a0f1a]">
         {/* Header stays outside Routes so it shows on every page */}
         <Header />
