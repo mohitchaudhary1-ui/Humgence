@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function AboutSection() {
+export default function AboutComponent() {
     const view = { once: false, amount: 0.2 };
     const fLeft = {
         off: { opacity: 0, x: -50 },

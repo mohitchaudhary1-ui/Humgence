@@ -8,7 +8,7 @@ export default function Banner() {
 
     return (
         <section className="relative h-screen w-full flex items-center overflow-hidden">
-            <img src="./banner.jpg" className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105 animate-slow-zoom" alt="Hero" />
+            <img src="./banner.webp" className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105 animate-slow-zoom" alt="Hero" />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
             <div className="relative z-10 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full">
                 <motion.div initial="off" animate="on" variants={fUp}>

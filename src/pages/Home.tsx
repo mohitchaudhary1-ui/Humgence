@@ -2,16 +2,16 @@
 
 import ClientsSliders from "./components/ClientsSliders";
 import Banner from "./components/Banner";
-import About from "./components/About";
-import Services from "./components/Services";
+import AboutComponent from "./components/AboutComponent";
+import ServicesComponent from "./components/ServicesComponent";
 import VideoTestimonials from "./components/Testimonials";
 
 export default function HumgenceHome() {
     return (
         <main className="bg-black text-white overflow-x-hidden">
             <Banner />
-            <About />
-            <Services />
+            <AboutComponent />
+            <ServicesComponent />
             <VideoTestimonials />
             <ClientsSliders />
 

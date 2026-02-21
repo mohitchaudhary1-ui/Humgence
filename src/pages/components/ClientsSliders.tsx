@@ -108,12 +108,20 @@ export default function IndustryGiants() {
                         >
                             <div className="w-40 h-24 md:w-52 md:h-32 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center p-6 transition-all duration-300 group-hover:shadow-xl group-hover:border-[#55c0dc]/30 group-hover:-translate-y-1">
                                 <img
-                                    src={client.logo}
+                                    // The "tr=w-600" automatically shrinks the 3000px image to 600px!
+                                    src={`${client.logo}?tr=w-600`}
                                     alt={client.name}
-                                    className="w-full h-full object-contain filter transition-all duration-500"
-                                    onError={(e) => {
-                                        e.currentTarget.src = "https://via.placeholder.com/200x100?text=Logo";
-                                    }}
+
+                                    // You provide different "instructions" in the URL for different sizes
+                                    srcSet={`
+                                    ${client.logo}?tr=w-300 300w,
+                                    ${client.logo}?tr=w-600 600w,
+                                    ${client.logo}?tr=w-1200 1200w
+                                `}
+
+                                    sizes="(max-width: 600px) 300px, 600px"
+                                    className="w-[238px] h-[109px] object-contain"
+                                    loading="lazy"
                                 />
                             </div>
                             <p className="text-slate-400 font-bold uppercase tracking-[0.2em] text-[9px] group-hover:text-[#55c0dc] transition-colors">

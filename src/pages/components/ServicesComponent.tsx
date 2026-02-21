@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function HomeServices() {
+export default function ServicesComponent() {
     const featuredServices = [
         {
             title: "Social Media Marketing",
