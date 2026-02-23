@@ -2,42 +2,93 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
+interface FormErrors {
+    name?: string;
+    email?: string;
+    phone?: string;
+}
+
 export default function ContactPage() {
     const [result, setResult] = useState("");
+    const [errors, setErrors] = useState<FormErrors>({}); // New state for field-specific errors
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const onSubmit = async (event) => {
         event.preventDefault();
+        setErrors({}); // Clear previous errors
+        setResult("");
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        // 1. Get and Trim all fields
+        const name = formData.get("name")?.toString().trim();
+        const email = formData.get("email")?.toString().trim();
+        const phone = formData.get("phone")?.toString().trim();
+        const message = formData.get("message")?.toString().trim();
+
+        // 2. Validation Logic
+        let newErrors: FormErrors = {};
+
+        if (!name) {
+            newErrors.name = "Required";
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email) {
+            newErrors.email = "Required";
+        } else if (!emailRegex.test(email)) {
+            newErrors.email = "Please enter a valid email address";
+        }
+
+        if (!phone) {
+            newErrors.phone = "Required";
+        } else if (!/^\d{10}$/.test(phone)) {
+            newErrors.phone = "Phone number must be exactly 10 digits";
+        }
+
+        // If there are errors, stop and show them
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
+
+        // 3. Proceed with submission
         setIsSubmitting(true);
         setResult("Sending....");
 
-        const formData = new FormData(event.target);
+        formData.set("name", name!);
+        formData.set("email", email!);
+        formData.set("phone", phone!);
+        if (message) formData.set("message", message);
 
-        // Enter your Web3Forms Access Key here
         formData.append("access_key", "a0fbedaf-6df2-4551-b7eb-ec7f7dc6b018");
 
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
 
-        const data = await response.json();
+            const data = await response.json();
 
-        if (data.success) {
-            setResult("Form Submitted Successfully");
-            setIsSubmitting(false);
-            event.target.reset();
-            window.location.href = "/thankyou";
-        } else {
-            console.log("Error", data);
-            setResult(data.message);
+            if (data.success) {
+                setResult("Form Submitted Successfully");
+                setIsSubmitting(false);
+                form.reset();
+                window.location.href = "/thankyou";
+            } else {
+                setResult(data.message || "Submission failed");
+                setIsSubmitting(false);
+            }
+        } catch (error) {
+            setResult("Network error. Please try again.");
             setIsSubmitting(false);
         }
     };
 
     return (
         <div className="bg-[#0f172a] min-h-screen selection:bg-[#56c0db] selection:text-white pb-20">
-
             {/* --- CINEMATIC HEADER --- */}
             <section className="relative h-[50vh] flex flex-col justify-center items-center px-6 text-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
@@ -57,17 +108,13 @@ export default function ContactPage() {
                 </motion.div>
             </section>
 
-            {/* --- OVERLAPPING CONTENT CARD --- */}
+            {/* --- CONTENT CARD --- */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-20">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 rounded-[2.5rem] overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.3)] border border-white/10">
 
-                    {/* LEFT: DARK INFO BAR */}
+                    {/* LEFT INFO BAR */}
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="lg:col-span-4 bg-slate-900/95 backdrop-blur-xl p-8 md:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/5"
+                        className="lg:col-span-4 bg-slate-900/95 backdrop-blur-xl p-8 md:p-14 border-b lg:border-b-0 lg:border-r border-white/5"
                     >
                         <div className="space-y-12">
                             <div>
@@ -78,37 +125,13 @@ export default function ContactPage() {
                                         { title: "WhatsApp", value: "+91 7508400002", color: "bg-emerald-500", link: "Tel:+91 7508400002" },
                                         { title: "Office", value: "SCO 140, 4th Floor, Feroze Gandhi Market, Ludhiana, India", color: "bg-slate-400" }
                                     ].map((item, i) => (
-                                        <motion.div
-                                            key={i}
-                                            whileHover={{ x: 5 }}
-                                            className="group cursor-pointer"
-                                        >
+                                        <div key={i} className="group">
                                             <p className="text-slate-500 text-[9px] font-bold uppercase tracking-[0.2em] mb-1">{item.title}</p>
                                             <div className="flex items-center gap-3">
-                                                <div className={`w-1 h-3 ${item.color} rounded-full group-hover:h-5 transition-all duration-300`} />
-                                                <a href={item.link} className="text-slate-200 font-medium text-base group-hover:text-[#56c0db] transition-colors">{item.value}</a>
+                                                <div className={`w-1 h-3 ${item.color} rounded-full group-hover:h-5 transition-all`} />
+                                                <a href={item.link} className="text-slate-200 font-medium text-base hover:text-[#56c0db]">{item.value}</a>
                                             </div>
-                                        </motion.div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div>
-                                <p className="text-slate-500 text-[9px] font-bold uppercase tracking-[0.2em] mb-4">Connect Socially</p>
-                                <div className="flex flex-wrap gap-3">
-                                    {[
-                                        { name: 'Instagram', url: 'https://www.instagram.com/humgence?igsh=eHdnOW94OTQxd2Ny' },
-                                        { name: 'Facebook', url: 'https://www.facebook.com/share/1Fj6sf9MSc/?mibextid=wwXIfr' }
-                                    ].map((social) => (
-                                        <a
-                                            key={social.name}
-                                            href={social.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="px-4 py-2 rounded-lg bg-white/5 text-slate-300 hover:bg-[#56c0db] hover:text-slate-900 transition-all cursor-pointer font-bold text-[10px] uppercase tracking-widest border border-white/5"
-                                        >
-                                            {social.name}
-                                        </a>
+                                        </div>
                                     ))}
                                 </div>
                             </div>
@@ -116,57 +139,53 @@ export default function ContactPage() {
                     </motion.div>
 
                     {/* RIGHT: THE FORM */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="lg:col-span-8 bg-slate-50 p-8 md:p-16 lg:p-20"
-                    >
+                    <motion.div className="lg:col-span-8 bg-slate-50 p-8 md:p-16 lg:p-20">
                         <form onSubmit={onSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+
                             {/* Full Name */}
                             <div className="space-y-2 group">
-                                <label className="text-black text-[10px] font-bold uppercase  tracking-widest ml-1">Full Name</label>
+                                <label className="text-black text-[10px] font-bold uppercase tracking-widest ml-1">Full Name</label>
                                 <input
                                     type="text"
                                     name="name"
-                                    required
-                                    className="w-full border-b border-black bg-transparent py-3 focus:outline-none focus:border-black transition-colors text-slate-900 font-semibold placeholder:text-slate-300"
+                                    className={`w-full border-b ${errors.name ? 'border-red-500' : 'border-black'} bg-transparent py-3 focus:outline-none text-slate-900 font-semibold`}
                                     placeholder="e.g. John Doe"
                                 />
+                                {errors.name && <p className="text-red-500 text-[10px] font-bold uppercase tracking-tight italic">{errors.name}</p>}
                             </div>
-                            <input type="hidden" name="redirect" value="https://humgence.com/thankyou" />
+
                             {/* Phone */}
                             <div className="space-y-2 group">
-                                <label className="text-black text-[10px] font-bold uppercase  tracking-widest ml-1">Phone</label>
+                                <label className="text-black text-[10px] font-bold uppercase tracking-widest ml-1">Phone</label>
                                 <input
                                     type="tel"
                                     name="phone"
-                                    required
-                                    className="w-full border-b border-black bg-transparent py-3 focus:outline-none focus:border-black transition-colors text-slate-900 font-semibold placeholder:text-slate-300"
+                                    maxLength={10}
+                                    className={`w-full border-b ${errors.phone ? 'border-red-500' : 'border-black'} bg-transparent py-3 focus:outline-none text-slate-900 font-semibold`}
                                     placeholder="e.g. 9876543210"
                                 />
+                                {errors.phone && <p className="text-red-500 text-[10px] font-bold uppercase tracking-tight italic">{errors.phone}</p>}
                             </div>
 
                             {/* Email Address */}
                             <div className="md:col-span-2 space-y-2 group">
-                                <label className="text-black text-[10px] font-bold uppercase  tracking-widest ml-1">Email Address</label>
+                                <label className="text-black text-[10px] font-bold uppercase tracking-widest ml-1">Email Address</label>
                                 <input
-                                    type="email"
+                                    type="text"
                                     name="email"
-                                    required
-                                    className="w-full border-b border-black bg-transparent py-3 focus:outline-none focus:border-black transition-colors text-slate-900 font-semibold placeholder:text-slate-300"
+                                    className={`w-full border-b ${errors.email ? 'border-red-500' : 'border-black'} bg-transparent py-3 focus:outline-none text-slate-900 font-semibold`}
                                     placeholder="name@company.com"
                                 />
+                                {errors.email && <p className="text-red-500 text-[10px] font-bold uppercase tracking-tight italic">{errors.email}</p>}
                             </div>
 
                             {/* Message Brief */}
                             <div className="md:col-span-2 space-y-2 pt-2">
-                                <label className="text-black text-[10px] font-bold uppercase  tracking-widest ml-1">Message Brief</label>
+                                <label className="text-black text-[10px] font-bold uppercase tracking-widest ml-1">Message Brief</label>
                                 <textarea
                                     name="message"
                                     rows={4}
-                                    className="w-full border border-black rounded-2xl p-5 focus:outline-none focus:border-black focus:ring-4 focus:ring-black/5 transition-all text-slate-900 font-medium placeholder:text-slate-300 resize-none bg-white"
+                                    className="w-full border border-black rounded-2xl p-5 focus:outline-none focus:ring-4 focus:ring-black/5 text-slate-900 font-medium placeholder:text-slate-300 resize-none bg-white"
                                     placeholder="Describe your project vision..."
                                 ></textarea>
                             </div>
@@ -177,7 +196,7 @@ export default function ContactPage() {
                                     disabled={isSubmitting}
                                     whileHover={{ scale: 1.01, translateY: -2 }}
                                     whileTap={{ scale: 0.99 }}
-                                    className="w-full bg-slate-900 text-white py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-[11px] shadow-xl shadow-slate-200 hover:bg-[#56c0db] hover:shadow-[#56c0db]/20 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="w-full bg-slate-900 text-white py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-[11px] shadow-xl hover:bg-[#56c0db] transition-all disabled:opacity-50"
                                 >
                                     {isSubmitting ? "Sending..." : "Submit Inquiry"}
                                 </motion.button>
