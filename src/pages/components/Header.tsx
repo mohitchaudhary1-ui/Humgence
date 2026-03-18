@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
     const [loading, setLoading] = useState(true);
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-
+    const { pathname } = useLocation();
+// Reset loader when pathname changes (navigation)
+    useEffect(() => {
+        setLoading(true);
+    }, [pathname]);
 
     // Google Tag Manager Script Injection
     useEffect(() => {
@@ -56,7 +60,6 @@ export default function Header() {
         }
     }, []);
 
-
     useEffect(() => {
         const timer = setTimeout(() => setLoading(false), 1000);
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -72,7 +75,7 @@ export default function Header() {
             clearTimeout(timer);
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [isOpen]);
+    }, [isOpen, pathname]);
 
     const menuVariants = {
         closed: { opacity: 0, y: "-100%" },
