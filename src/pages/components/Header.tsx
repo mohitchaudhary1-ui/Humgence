@@ -181,7 +181,7 @@ export default function Header() {
                                 <div className="xs:block">
                                     <h4 className="text-[10px] tracking-[0.5em] uppercase font-black text-[#56c0db] mb-4">Address</h4>
                                     <p className="text-[10px] md:text-2xl text-white/80 font-medium leading-relaxed">
-                                        India : SCO 17, 18 Model Town Extension,<br />
+                                        India : SCO 140, 4 Floor, Firoz Gandhi Market, Jila Kacheri Area, Model Gram, 141001,<br />
                                         Ludhiana, India
                                     </p>
                                     <p className="text-[10px] md:text-2xl text-white/80 font-medium leading-relaxed">

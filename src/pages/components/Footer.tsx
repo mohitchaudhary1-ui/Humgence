@@ -119,7 +119,7 @@ const Footer = () => {
                                     <i className="fas fa-map-marker-alt"></i>
                                 </div>
                                 <span className="text-sm font-medium">
-                                    India : SCO 140, 4th Floor, Feroze Gandhi Market, Ludhiana, India
+                                    India : SCO 140, 4 Floor, Firoz Gandhi Market, Jila Kacheri Area, Model Gram, Ludhiana, Punjab 141001
 
                                 </span>
                             </li>
