@@ -69,8 +69,9 @@ export default function HomeContactForm() {
 
       if (data.success) {
         setStatus("success");
-        setMsg("✅ Thanks! We will contact you shortly.");
+        // setMsg("✅ Thanks! We will contact you shortly.");
         setForm({ name: "", email: "", phone: "", message: "" });
+        window.location.href = "/thankyou";
 
         // Optional WhatsApp redirect
         // window.open(`https://wa.me/91${form.phone}`, "_blank");
