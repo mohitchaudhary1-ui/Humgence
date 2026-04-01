@@ -123,7 +123,8 @@ export default function ContactPage() {
                                     {[
                                         { title: "Email", value: "info@humgence.com", color: "bg-[#56c0db]", link: "mailto:info@humgence.com" },
                                         { title: "WhatsApp", value: "+91 7508400002", color: "bg-emerald-500", link: "Tel:+91 7508400002" },
-                                        { title: "Office", value: "SCO 140, 4 Floor, Firoz Gandhi Market, Jila Kacheri Area, Model Gram, Ludhiana, Punjab 141001", color: "bg-slate-400" }
+                                        { title: "Office", value: "SCO 140, 4 Floor, Firoz Gandhi Market, Jila Kacheri Area, Model Gram, Ludhiana, Punjab 141001", color: "bg-slate-400" },
+                                        { title: "Office", value: "AlKazim Tower, Business Central, Dubai Internet City, Sheikh Zayed Road, Dubai, UAE", color: "bg-slate-400" }
                                     ].map((item, i) => (
                                         <div key={i} className="group">
                                             <p className="text-slate-500 text-[9px] font-bold uppercase tracking-[0.2em] mb-1">{item.title}</p>
