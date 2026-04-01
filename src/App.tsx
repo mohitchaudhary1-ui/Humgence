@@ -13,6 +13,7 @@ import ThankYou from './pages/Thankyou';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Cursor from './pages/components/Cursor';
+import Whatsapp from './pages/components/Whatsapp';
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -29,6 +30,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTop />
+      <Whatsapp />
       <div className="min-h-screen text-white selection:bg-[#56c0db] selection:text-white bg-[#0a0f1a]">
         {/* Header stays outside Routes so it shows on every page */}
         <Header />
