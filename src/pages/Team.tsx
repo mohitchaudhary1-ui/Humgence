@@ -25,13 +25,23 @@ const team = [
         image: "/team/rahul_humgence.png",
         // video: "/team/videos/Mohit Sir.mp4"
     },
+    // {
+    //     name: "Deeksha",
+    //     role: "Operations Lead",
+    //     bio: "At Humgence, Deeksha Kalra our Operations Head plays a pivotal role in driving structure, strategy, and seamless execution across the organization. With a professional journey that began in 2015, she brings extensive experience in branding, marketing, PR, digital media, and large-scale event management.Her strength lies in transforming vision into well- defined systems, ensuring every project is executed with clarity, efficiency, and measurable impact.She leads cross - functional teams with strong leadership and accountability, aligning creative direction with operational excellence.With a deep understanding of brand positioning and execution dynamics, she ensures that Hungence consistently delivers high - quality experiences, streamlined processes, and sustainable growth across all initiatives.",
+    //     grad: "from-amber-400 to-[#56c0db]",
+    //     image: "/team/deeksha_humgence.png",
+    //     video: "/team/videos/Deeksha.mp4"
+    // },
+
     {
-        name: "Deeksha",
+        name: "Edita Kohli",
         role: "Operations Lead",
-        bio: "At Humgence, Deeksha Kalra our Operations Head plays a pivotal role in driving structure, strategy, and seamless execution across the organization. With a professional journey that began in 2015, she brings extensive experience in branding, marketing, PR, digital media, and large-scale event management.Her strength lies in transforming vision into well- defined systems, ensuring every project is executed with clarity, efficiency, and measurable impact.She leads cross - functional teams with strong leadership and accountability, aligning creative direction with operational excellence.With a deep understanding of brand positioning and execution dynamics, she ensures that Hungence consistently delivers high - quality experiences, streamlined processes, and sustainable growth across all initiatives.",
-        grad: "from-amber-400 to-[#56c0db]",
-        image: "/team/deeksha_humgence.png",
-        video: "/team/videos/Deeksha.mp4"
+        bio: "As the Operations Lead at Humgence, Edita manages and oversees all social media operations under her leadership. She supervises the team of social media managers, ensuring consistency, discipline, and performance across platforms. From strategy planning and campaign ideation to execution and analytics, she takes complete ownership of brand positioning and digital growth. She also independently handles key clients including Nirvana, Deekay Electronics, and Lakmé, ensuring tailored content strategies and measurable results. With strong creative direction and structured planning, she ensures productivity, accountability, and brand alignment while driving engagement, visibility, and overall digital success for every client under her management..",
+        grad: "from-[#56c0db] to-emerald-500",
+        image: "/team/edita_humgence.png",
+        video: "/team/videos/edita.mp4"
+
     },
     {
         name: "Sukhcharan Singh",
@@ -42,12 +52,20 @@ const team = [
         video: "/team/videos/Sukhcharan.mp4"
     },
     {
-        name: "Gursharan Singh",
-        role: "Video Editor & Graphic Designer",
-        bio: "Gursharan is a highly skilled Video Editor and Graphic Designer with over five years of professional experience crafting compelling visual stories. With a sharp creative eye and strong technical expertise, he specializes in delivering impactful designs and seamless video edits that elevate brand presence. Proficient in Adobe Photoshop and Adobe Premiere Pro, along with the full Adobe Creative Suite, Gursharan combines creativity with precision to produce engaging digital content. From promotional videos and social media creatives to branding assets and cinematic edits, his work reflects attention to detail, storytelling strength, and a deep understanding of visual communication that drives results.",
-        grad: "from-orange-400 to-[#56c0db]",
-        image: "/team/gursharan_humgence.png",
-        video: "/team/videos/gursharan.mp4"
+        name: "Amandeep Singh",
+        role: "Technical Head",
+        bio: "As our Technical Lead and Full Stack Developer, Amandeep Singh is the driving force behind the robust digital architectures that power our agency. He doesn’t just oversee development; he meticulously designs every layer of our systems, ensuring a seamless transition from complex backend logic to high-performance user interfaces. Amandeep bridges the gap between ambitious brand visions and technical reality, leading our engineering team with a blend of strategic foresight and hands-on expertise. His commitment to excellence ensures every project is scalable, secure, and world-class. Under his leadership, we continue to push the boundaries of what’s possible in digital innovation.",
+        grad: "from-[#56c0db] to-blue-600",
+        image: "/team/amandeep_humgence.png",
+        video: "/team/videos/Amandeep.mp4"
+    },
+     {
+        name: "Shreya Kapoor",
+        role: "Social Media Lead",
+        bio: "Shreya Kapoor is a results-driven Social Media Lead with over 3 years of experience in digital marketing. She specialises in building strong brand identities through strategic content planning, performance-driven campaigns and impactful influencer collaborations. With a deep understanding of audience behaviour and platform trends, she crafts marketing strategies that enhance visibility, engagement and conversions. From brand positioning to campaign execution, Shreya focuses on measurable growth and authentic storytelling. Her expertise lies in turning ideas into digital success stories by blending creativity with data-driven insights to help brands establish a powerful and lasting online presence.",
+        grad: "from-red-400 to-[#56c0db]",
+        image: "/team/shreya_humgence.png",
+        video: "/team/videos/Shreya.mp4"
     },
     {
         name: "Harpreet Singh",
@@ -58,12 +76,12 @@ const team = [
         video: "/team/videos/harpreet.mp4"
     },
     {
-        name: "Amandeep Singh",
-        role: "Technical Head",
-        bio: "As our Technical Lead and Full Stack Developer, Amandeep Singh is the driving force behind the robust digital architectures that power our agency. He doesn’t just oversee development; he meticulously designs every layer of our systems, ensuring a seamless transition from complex backend logic to high-performance user interfaces. Amandeep bridges the gap between ambitious brand visions and technical reality, leading our engineering team with a blend of strategic foresight and hands-on expertise. His commitment to excellence ensures every project is scalable, secure, and world-class. Under his leadership, we continue to push the boundaries of what’s possible in digital innovation.",
-        grad: "from-[#56c0db] to-blue-600",
-        image: "/team/amandeep_humgence.png",
-        video: "/team/videos/Amandeep.mp4"
+        name: "Gursharan Singh",
+        role: "Video Editor & Graphic Designer",
+        bio: "Gursharan is a highly skilled Video Editor and Graphic Designer with over five years of professional experience crafting compelling visual stories. With a sharp creative eye and strong technical expertise, he specializes in delivering impactful designs and seamless video edits that elevate brand presence. Proficient in Adobe Photoshop and Adobe Premiere Pro, along with the full Adobe Creative Suite, Gursharan combines creativity with precision to produce engaging digital content. From promotional videos and social media creatives to branding assets and cinematic edits, his work reflects attention to detail, storytelling strength, and a deep understanding of visual communication that drives results.",
+        grad: "from-orange-400 to-[#56c0db]",
+        image: "/team/gursharan_humgence.png",
+        video: "/team/videos/gursharan.mp4"
     },
     {
         name: "Akshita",
@@ -72,15 +90,6 @@ const team = [
         grad: "from-rose-500 to-[#56c0db]",
         image: "/team/akshita_humgence.png",
         video: "/team/videos/Akshita.mp4"
-    },
-    {
-        name: "Edita Kohli",
-        role: "Social Media Lead",
-        bio: "As the Social Media Lead at Humgence, Edita manages and oversees all social media operations under her leadership. She supervises the team of social media managers, ensuring consistency, discipline, and performance across platforms. From strategy planning and campaign ideation to execution and analytics, she takes complete ownership of brand positioning and digital growth. She also independently handles key clients including Nirvana, Deekay Electronics, and Lakmé, ensuring tailored content strategies and measurable results. With strong creative direction and structured planning, she ensures productivity, accountability, and brand alignment while driving engagement, visibility, and overall digital success for every client under her management..",
-        grad: "from-[#56c0db] to-emerald-500",
-        image: "/team/edita_humgence.png",
-        video: "/team/videos/edita.mp4"
-
     },
     {
         name: "Sehaj Singh Saggu",
@@ -139,14 +148,7 @@ const team = [
         image: "/team/sneha_humgence.png",
         video: "/team/videos/Sneha.mp4"
     },
-    {
-        name: "Shreya Kapoor",
-        role: "Social Media Manager, Influencer Marketing",
-        bio: "Shreya Kapoor is a results-driven Social Media Manager and Influencer Marketing Specialist with over 3 years of experience in digital marketing. She specialises in building strong brand identities through strategic content planning, performance-driven campaigns and impactful influencer collaborations. With a deep understanding of audience behaviour and platform trends, she crafts marketing strategies that enhance visibility, engagement and conversions. From brand positioning to campaign execution, Shreya focuses on measurable growth and authentic storytelling. Her expertise lies in turning ideas into digital success stories by blending creativity with data-driven insights to help brands establish a powerful and lasting online presence.",
-        grad: "from-red-400 to-[#56c0db]",
-        image: "/team/shreya_humgence.png",
-        video: "/team/videos/Shreya.mp4"
-    },
+   
     {
         name: "Vansh",
         role: "Brand Strategist, Social Media Manager",
