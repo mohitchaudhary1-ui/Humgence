@@ -36,8 +36,8 @@ const team = [
 
     {
         name: "Edita Kohli",
-        role: "Operations Lead",
-        bio: "As the Operations Lead at Humgence, Edita manages and oversees all social media operations under her leadership. She supervises the team of social media managers, ensuring consistency, discipline, and performance across platforms. From strategy planning and campaign ideation to execution and analytics, she takes complete ownership of brand positioning and digital growth. She also independently handles key clients including Nirvana, Deekay Electronics, and Lakmé, ensuring tailored content strategies and measurable results. With strong creative direction and structured planning, she ensures productivity, accountability, and brand alignment while driving engagement, visibility, and overall digital success for every client under her management..",
+        role: "Operations Head",
+        bio: "As Operations Lead at Humgence, Edita Kohli drives the agency's social media function with precision, creativity, and purpose. She oversees a dedicated team of social media managers, setting the standard for consistency, discipline, and platform performance across every account. From strategy development and campaign ideation through to execution and in-depth analytics, Edita takes complete ownership of brand positioning and digital growth for each client she leads. Her portfolio includes key accounts such as Nirvana Hotel & Banquets, Deekay Electronics, and Lakmé Salon — each receiving bespoke content strategies and delivering measurable, impactful results. A natural leader with a sharp creative eye and a structured approach to planning, Edita fosters a culture of accountability and collaboration within her team, ensuring every campaign is aligned with brand identity and broader commercial goals. Her dedication and drive for excellence make her a cornerstone of Humgence's continued growth and client success.",
         grad: "from-[#56c0db] to-emerald-500",
         image: "/team/edita_humgence.png",
         video: "/team/videos/edita.mp4"
@@ -62,7 +62,7 @@ const team = [
      {
         name: "Shreya Kapoor",
         role: "Social Media Lead",
-        bio: "Shreya Kapoor is a results-driven Social Media Lead with over 3 years of experience in digital marketing. She specialises in building strong brand identities through strategic content planning, performance-driven campaigns and impactful influencer collaborations. With a deep understanding of audience behaviour and platform trends, she crafts marketing strategies that enhance visibility, engagement and conversions. From brand positioning to campaign execution, Shreya focuses on measurable growth and authentic storytelling. Her expertise lies in turning ideas into digital success stories by blending creativity with data-driven insights to help brands establish a powerful and lasting online presence.",
+        bio: "Every scroll-stopping post, every viral moment, every conversation we spark online - that's intentional. None of it happens by accident.As the Social Media Lead at Humgence I live at the crossroads of creativity and strategy. My world revolves around crafting content that doesn't just look good, it performs. From ideation to execution, I translate our brand's vision into stories that resonate, campaigns that trend, and communities that genuinely engage.Social media today isn't just about posting - it's about presence. It's about showing up consistently, authentically, and boldly in a space that never sleeps. That's the standard I hold myself to every single day.Whether it's a product launch that needs buzz, a campaign that needs heart or a brand that needs a louder voice - I'm the person making it happen behind the scenes.If you follow us, you're already part of the story we're building. And trust me, the best chapters are still ahead.",
         grad: "from-red-400 to-[#56c0db]",
         image: "/team/shreya_humgence.png",
         video: "/team/videos/Shreya.mp4"
@@ -189,14 +189,14 @@ const team = [
         image: "/team/abhishek_humgence.png",
         video: "/team/videos/Abhishek.mp4"
     },
-    {
-        name: "Taran",
-        role: "Graphic Designer",
-        bio: "Creating bold visuals designed to stand out instantly.",
-        grad: "from-[#56c0db] to-orange-500",
-        image: "/team/taran_humgence.png",
-        video: "/team/videos/Taran.mp4"
-    }
+    // {
+    //     name: "Taran",
+    //     role: "Graphic Designer",
+    //     bio: "Creating bold visuals designed to stand out instantly.",
+    //     grad: "from-[#56c0db] to-orange-500",
+    //     image: "/team/taran_humgence.png",
+    //     video: "/team/videos/Taran.mp4"
+    // }
 ];
 export default function PerfectTeamGrid() {
     return (
