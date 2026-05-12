@@ -87,110 +87,120 @@ export default function HomeContactForm() {
   };
 
   return (
-    <section className="relative bg-[#0b1120] py-20 px-4">
+   <section className="relative bg-[#0b1120] py-28 px-4 overflow-hidden">
 
-      {/* Background Glow */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="w-[500px] h-[300px] bg-[#56c0db] blur-[120px] rounded-full mx-auto mt-10" />
+  {/* Premium glow system */}
+  <div className="absolute inset-0 opacity-30">
+    <div className="absolute top-[-150px] left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#56c0db] blur-[180px] rounded-full" />
+    <div className="absolute bottom-[-200px] right-[-120px] w-[500px] h-[500px] bg-white blur-[220px] opacity-10 rounded-full" />
+  </div>
+
+  <div className="relative max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+    {/* LEFT SIDE */}
+    <div className="text-center lg:text-left space-y-8">
+
+      <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.05] tracking-tighter">
+        Let’s Build Something <br />
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#56c0db] via-white to-slate-400">
+          Amazing Together
+        </span>
+      </h2>
+
+      <p className="text-white/50 text-base md:text-lg max-w-md mx-auto lg:mx-0 leading-relaxed">
+        Share your idea — we’ll transform it into a scalable digital product within days, not months.
+      </p>
+
+      <div className="space-y-3 text-white/60 text-sm">
+        <p>✔ Fast Response Guarantee</p>
+        <p>✔ Expert Strategy & Execution</p>
+        <p>✔ Transparent Pricing Model</p>
       </div>
 
-      <div className="relative max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    </div>
 
-        {/* LEFT SIDE */}
-        <div className="text-center lg:text-left">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">
-            Let’s Build Something <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#56c0db] to-slate-400">
-              Amazing Together
-            </span>
-          </h2>
+    {/* FORM - GLASS LUXURY PANEL */}
+    <div className="relative">
 
-          <p className="text-slate-400 mt-4 text-base sm:text-lg max-w-md mx-auto lg:mx-0">
-            Fill out the form and our team will contact you within 24 hours.
-          </p>
+      {/* glass layer */}
+      <div className="absolute inset-0 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl" />
 
-          <div className="mt-6 space-y-2 text-slate-300 text-sm">
-            <p>✔ Fast Response</p>
-            <p>✔ Expert Consultation</p>
-            <p>✔ No Hidden Charges</p>
-          </div>
-        </div>
+      <div className="relative p-8 md:p-10 space-y-5">
 
-        {/* FORM */}
-        <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
+        <form onSubmit={handleSubmit} className="space-y-5">
 
-          <form onSubmit={handleSubmit} className="space-y-5">
+          {/* NAME */}
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            value={form.name}
+            onChange={handleChange}
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:border-[#56c0db] focus:ring-2 focus:ring-[#56c0db]/20 outline-none transition"
+          />
+          {errors.name && <p className="text-red-400 text-xs">{errors.name}</p>}
 
-            {/* Name */}
-            <div>
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                value={form.name}
-                onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 text-black placeholder:text-gray-400 focus:ring-2 focus:ring-[#56c0db] outline-none"
-              />
-              {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
-            </div>
+          {/* EMAIL */}
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            value={form.email}
+            onChange={handleChange}
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:border-[#56c0db] focus:ring-2 focus:ring-[#56c0db]/20 outline-none transition"
+          />
+          {errors.email && <p className="text-red-400 text-xs">{errors.email}</p>}
 
-            {/* Email */}
-            <div>
-              <input
-                type="text"
-                name="email"
-                placeholder="Email Address"
-                value={form.email}
-                onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 text-black placeholder:text-gray-400 focus:ring-2 focus:ring-[#56c0db] outline-none"
-              />
-              {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
-            </div>
+          {/* PHONE */}
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            value={form.phone}
+            onChange={handleChange}
+            maxLength={10}
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:border-[#56c0db] focus:ring-2 focus:ring-[#56c0db]/20 outline-none transition"
+          />
+          {errors.phone && <p className="text-red-400 text-xs">{errors.phone}</p>}
 
-            {/* Phone */}
-            <div>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                value={form.phone}
-                onChange={handleChange}
-                maxLength={10}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 text-black placeholder:text-gray-400 focus:ring-2 focus:ring-[#56c0db] outline-none"
-              />
-              {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
-            </div>
+          {/* MESSAGE */}
+          <textarea
+            name="message"
+            placeholder="Tell us about your project..."
+            value={form.message}
+            onChange={handleChange}
+            rows={4}
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:border-[#56c0db] focus:ring-2 focus:ring-[#56c0db]/20 outline-none resize-none transition"
+          />
 
-            {/* Message */}
-            <textarea
-              name="message"
-              placeholder="Tell us about your project..."
-              value={form.message}
-              onChange={handleChange}
-              rows={4}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 text-black placeholder:text-gray-400 focus:ring-2 focus:ring-[#56c0db] outline-none resize-none"
-            />
-
-            {/* Button */}
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              className="w-full bg-gradient-to-r from-[#56c0db] to-slate-900 text-white py-3 rounded-lg font-semibold text-sm tracking-wide hover:opacity-90 transition disabled:opacity-50"
-            >
+          {/* BUTTON */}
+          <button
+            type="submit"
+            disabled={status === "loading"}
+            className="group relative w-full overflow-hidden rounded-xl py-3 bg-[#56c0db] text-black font-bold text-xs uppercase tracking-[0.3em] transition-all hover:bg-white"
+          >
+            <span className="relative z-10">
               {status === "loading" ? "Sending..." : "Get Free Consultation"}
-            </button>
+            </span>
 
-            {/* Status Message */}
-            {msg && (
-              <p className={`text-center text-sm font-medium ${
-                status === "success" ? "text-green-600" : "text-red-500"
-              }`}>
-                {msg}
-              </p>
-            )}
-          </form>
-        </div>
+            {/* shine effect */}
+            <span className="absolute inset-0 bg-white translate-x-[-120%] group-hover:translate-x-0 transition-transform duration-500" />
+          </button>
+
+          {/* STATUS */}
+          {msg && (
+            <p className={`text-center text-sm font-medium ${
+              status === "success" ? "text-green-400" : "text-red-400"
+            }`}>
+              {msg}
+            </p>
+          )}
+
+        </form>
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
   );
 }

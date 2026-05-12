@@ -14,7 +14,7 @@ import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Cursor from './pages/components/Cursor';
 import Whatsapp from './pages/components/Whatsapp';
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
 

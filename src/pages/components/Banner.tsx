@@ -1,34 +1,103 @@
 import { motion } from "motion/react";
 
 export default function Banner() {
-    const fUp = {
-        off: { opacity: 0, y: 50 },
-        on: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-    };
+  const container = {
+    off: {},
+    on: {
+      transition: { staggerChildren: 0.12 }
+    }
+  };
 
-    return (
-        <section className="relative h-screen w-full flex items-center overflow-hidden">
-            <img src="./banner.webp" className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105 animate-slow-zoom" alt="Hero" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
-            <div className="relative z-10 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full">
-                <motion.div initial="off" animate="on" variants={fUp}>
-                    <h1 className="text-3xl md:text-9xl font-black uppercase tracking-tighter leading-[0.85] mb-6">
-                        Beyond <br /> <span className="text-[#56c0db]">Boundaries.</span>
-                    </h1>
-                    <p className="text-lg md:text-xl max-w-xl font-light text-white/70 uppercase tracking-[0.2em]">
-                        Global Creative Agency Driving Digital Revolution.
-                    </p>
-                    <a
-                        href="/contact"
-                        className="inline-flex items-center gap-3 mt-8 px-10 py-4 rounded-full bg-[#56c0db] text-black font-black text-xs uppercase tracking-[0.3em] hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg shadow-[#56c0db]/30"
-                    >
-                        Get In Touch
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                            <path d="M5 12h14m-7-7l7 7-7 7" />
-                        </svg>
-                    </a>
-                </motion.div>
-            </div>
-        </section>
-    );
+  const item = {
+    off: { opacity: 0, y: 40 },
+    on: {
+      opacity: 0.9,
+      y: 0,
+      transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] }
+    }
+  };
+
+  return (
+    <section className="relative h-screen w-full flex items-center overflow-hidden bg-black">
+
+      {/* Background image with cinematic depth */}
+      <img
+        src="./banner.webp"
+        alt="Hero"
+        className="absolute inset-0 w-full h-full object-cover scale-125 opacity-40"
+      />
+
+      {/* Premium gradient atmosphere */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(86,192,219,0.18),transparent_45%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_50%),linear-gradient(to_right,rgba(0,0,0,0.92),rgba(0,0,0,0.55),rgba(0,0,0,0.95))]" />
+
+      {/* Noise layer (very important for luxury feel) */}
+      <div className="absolute inset-0 opacity-[0.06] mix-blend-overlay bg-[url('/noise.png')]" />
+
+      {/* soft floating light blobs */}
+      <div className="absolute top-1/4 left-[-120px] w-[350px] h-[350px] bg-[#56c0db] blur-[180px] opacity-20" />
+      <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-white blur-[200px] opacity-10" />
+
+      {/* Content */}
+      <div className="relative z-10 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full">
+
+        <motion.div variants={container} initial="off" animate="on">
+
+          {/* Badge */}
+          <motion.div
+            variants={item}
+            className="inline-flex items-center gap-2 mb-8 px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-[10px] tracking-[0.35em] uppercase text-white/60"
+          >
+            Digital Creative Studio
+          </motion.div>
+
+          {/* Main Heading */}
+          <motion.h1
+  variants={item}
+  className="text-5xl md:text-8xl font-black leading-[0.85] tracking-tighter text-white"
+>
+  We Build<br />
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#56c0db] via-white to-[#56c0db]">
+     Digital Systems
+  </span>
+</motion.h1>
+
+          {/* Sub text */}
+          <motion.p
+            variants={item}
+            className="mt-8 max-w-xl text-white/50 text-sm md:text-lg leading-relaxed tracking-wide"
+          >
+            We design digital ecosystems that elevate brands into global experiences —
+            blending strategy, design, and performance.
+          </motion.p>
+
+          {/* CTA group */}
+          <motion.div
+            variants={item}
+            className="flex flex-wrap items-center gap-5 mt-12"
+          >
+
+            {/* Primary CTA */}
+            <a
+              href="/contact"
+              className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full bg-[#56c0db] text-black font-bold text-xs uppercase tracking-[0.3em] overflow-hidden"
+            >
+              <span className="relative z-10">Get In Touch</span>
+
+              {/* hover shine effect */}
+              <span className="absolute inset-0 bg-white translate-x-[-120%] group-hover:translate-x-0 transition-transform duration-500" />
+
+              <span className="relative z-10 group-hover:translate-x-1 transition-transform duration-300">
+                →
+              </span>
+            </a>
+
+            
+
+          </motion.div>
+
+        </motion.div>
+      </div>
+
+    </section>
+  );
 }

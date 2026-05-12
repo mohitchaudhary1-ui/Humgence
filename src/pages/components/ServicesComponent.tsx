@@ -31,72 +31,119 @@ export default function ServicesComponent() {
     ];
 
     return (
-        <section className="bg-[#020617] py-24 px-6 sm:px-12 lg:px-20">
-            <div className="max-w-7xl mx-auto">
+        <section className="relative bg-[#020617] py-28 px-6 sm:px-12 lg:px-20 overflow-hidden">
 
-                {/* --- HEADER --- */}
-                <div className="mb-5 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/5 pb-10 font-bold">
-                    <div className="max-w-2xl">
-                        <h2 className="text-[#56c0db] text-[10px] font-black uppercase tracking-[0.5em] mb-4">Featured Expertise</h2>
-                        <h3 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none">
-                            Our <span className="">Services</span>
-                        </h3>
-                    </div>
-                </div>
+  {/* background glow */}
+  <div className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-[#56c0db] blur-[180px] opacity-10" />
+  <div className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-white blur-[220px] opacity-5" />
 
-                {/* --- SERVICES GRID --- */}
-                <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-5 mb-16">
-                    {featuredServices.map((service, i) => (
-                        <div
-                            key={i}
-                            className="group relative h-[400px] rounded-[2.5rem] bg-slate-900/40 border border-white/5 overflow-hidden flex flex-col p-8 transition-all duration-500 hover:border-[#56c0db]/40"
-                        >
-                            {/* Static View - Will hide on hover */}
-                            <div className="relative z-10 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0">
-                                <div className="mb-8">
-                                    <div className="w-10 h-[2px] bg-[#56c0db] group-hover:w-full transition-all duration-700" />
-                                </div>
-                                <h4 className="text-2xl font-bold text-white uppercase tracking-tight mb-4 leading-tight">
-                                    {service.title}
-                                </h4>
-                                <p className="text-slate-400 text-sm leading-relaxed font-bold">
-                                    {service.desc}
-                                </p>
-                            </div>
+  <div className="max-w-7xl mx-auto relative z-10">
 
-                            {/* Hover "Detail" Panel - Slides up */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#56c0db] to-[#3a8da1] translate-y-full group-hover:translate-y-0 transition-transform duration-600 ease-[0.16,1,0.3,1] p-8 flex flex-col justify-center">
-                                <h4 className="text-[#020617] text-xs font-black uppercase tracking-[0.2em] mb-6 border-b border-black/10 pb-2">What we do:</h4>
-                                <ul className="space-y-4">
-                                    {service.details.map((detail, idx) => (
-                                        <li key={idx} className="flex items-start gap-3 text-[#020617] font-bold text-[14px]">
-                                            <div className="mt-1.5 w-1.5 h-1.5 bg-[#020617] rounded-full shrink-0" />
-                                            {detail}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+    {/* HEADER */}
+    <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-10 border-b border-white/10 pb-10">
 
-                {/* --- SHOW MORE BUTTON --- */}
-                <div className="flex justify-center">
-                    <motion.a
-                        href="/services"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="group relative px-12 py-5 rounded-full overflow-hidden bg-white/5 border border-white/10 flex items-center gap-4 transition-all hover:bg-white/10"
-                    >
-                        <span className="text-white text-xs font-black uppercase tracking-[0.3em]">Explore All Services</span>
-                        <div className="w-8 h-8 rounded-full bg-[#56c0db] flex items-center justify-center group-hover:translate-x-2 transition-transform">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="3">
-                                <path d="M5 12h14m-7-7l7 7-7 7" />
-                            </svg>
-                        </div>
-                    </motion.a>
-                </div>
+      <div className="max-w-2xl space-y-6">
+
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase tracking-[0.4em] text-[#56c0db]">
+          Featured Expertise
+        </div>
+
+        <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter">
+          Our <span className="text-[#56c0db]">Services</span>
+        </h2>
+
+        <p className="text-white/50 max-w-md text-sm leading-relaxed">
+          We design, build, and scale digital systems that turn brands into market leaders.
+        </p>
+
+      </div>
+
+    </div>
+
+    {/* SERVICES GRID */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+
+      {featuredServices.map((service, i) => (
+        <div
+          key={i}
+          className="group relative h-[420px] rounded-[2rem] overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-xl transition-all duration-500 hover:border-[#56c0db]/40"
+        >
+
+          {/* soft glow on hover */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_top,rgba(86,192,219,0.15),transparent_60%)]" />
+
+          {/* FRONT */}
+          <div className="relative z-10 p-8 h-full flex flex-col justify-between transition-transform duration-500 group-hover:-translate-y-2">
+
+            <div>
+
+              <div className="w-10 h-[2px] bg-[#56c0db] mb-6 group-hover:w-16 transition-all duration-500" />
+
+              <h4 className="text-xl font-bold text-white leading-snug mb-4">
+                {service.title}
+              </h4>
+
+              <p className="text-white/50 text-sm leading-relaxed">
+                {service.desc}
+              </p>
+
             </div>
-        </section>
+
+            <div className="text-xs text-white/30 uppercase tracking-[0.3em]">
+              Hover to explore
+            </div>
+
+          </div>
+
+          {/* BACK / DETAILS */}
+          <div className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out bg-gradient-to-br from-[#56c0db] to-[#3a8da1] p-8 flex flex-col justify-center">
+
+            <h4 className="text-black text-xs font-black uppercase tracking-[0.3em] mb-6 opacity-80">
+              What we deliver
+            </h4>
+
+            <ul className="space-y-4">
+              {service.details.map((detail, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-start gap-3 text-black font-semibold text-sm leading-snug"
+                >
+                  <span className="mt-1 w-1.5 h-1.5 bg-black rounded-full shrink-0" />
+                  {detail}
+                </li>
+              ))}
+            </ul>
+
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+
+    {/* CTA */}
+    <div className="flex justify-center">
+
+      <motion.a
+        href="/services"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.97 }}
+        className="group relative px-14 py-5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md flex items-center gap-4 overflow-hidden transition-all hover:bg-white/10"
+      >
+
+        <span className="text-white text-xs font-bold uppercase tracking-[0.35em]">
+          Explore All Services
+        </span>
+
+        <div className="w-9 h-9 rounded-full bg-[#56c0db] flex items-center justify-center group-hover:translate-x-2 transition-transform duration-300">
+          <span className="text-black font-black">→</span>
+        </div>
+
+      </motion.a>
+
+    </div>
+
+  </div>
+</section>
     );
 }
