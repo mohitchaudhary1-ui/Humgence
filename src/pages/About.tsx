@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 // Reusable Animation Variants
@@ -18,6 +19,20 @@ const staggerContainer = {
 
 export default function AboutPage() {
     return (
+        <>
+         <Helmet>
+                    <title>Humgence - About Us</title>
+                    <meta name="description" content="Humgence is a leading digital transformation company that helps businesses thrive in the digital age. We offer innovative solutions and services to drive growth and success." />
+                    <meta name="keywords" content="digital transformation, technology solutions, business growth, innovation, Humgence" />
+                    <meta name="author" content="Humgence" />
+                    {/* open graph meta tags */}
+                    <meta property="og:title" content="Humgence - About Us" />
+                    <meta property="og:description" content="Humgence is a leading digital transformation company that helps businesses thrive in the digital age. We offer innovative solutions and services to drive growth and success." />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:url" content="https://humgence.com/about" />
+                    <meta property="og:image" content="https://humgence.com/banner.webp" />
+        
+                </Helmet>
         <div className="bg-white text-slate-900 selection:bg-[#56c0db] selection:text-white">
 
             {/* --- SECTION 1: WHO WE ARE --- */}
@@ -345,5 +360,6 @@ export default function AboutPage() {
             </section>
 
         </div>
+        </>
     );
 }

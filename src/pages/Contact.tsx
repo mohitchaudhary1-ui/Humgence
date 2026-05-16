@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 interface FormErrors {
     name?: string;
@@ -88,6 +89,23 @@ export default function ContactPage() {
     };
 
     return (
+        <>
+        <Helmet>
+            <title>Humgence - Contact Us</title>
+            <meta name="description" content="Get in touch with Humgence for your digital transformation needs. Contact us via email, phone, or visit our offices in Ludhiana and Dubai." />
+            <meta name="keywords" content="contact Humgence, digital transformation contact, Humgence email, Humgence phone, Humgence offices" />
+            <meta name="author" content="Humgence" />
+            {/* open graph meta tags */}
+            <meta property="og:title" content="Humgence - Contact Us" />
+            <meta property="og:description" content="Get in touch with Humgence for your digital transformation needs. Contact us via email, phone, or visit our offices in Ludhiana and Dubai." />
+            <meta property="og:image" content="https://humgence.com/logo.png" />
+            <meta property="og:url" content="https://humgence.com/contact" />
+            <meta property="og:type" content="website" />
+            <meta property="og:site_name" content="Humgence" />
+            {/* twitter card meta tags */}
+           
+
+        </Helmet>
         <div className="bg-[#0f172a] min-h-screen selection:bg-[#56c0db] selection:text-white pb-20">
             {/* --- CINEMATIC HEADER --- */}
             <section className="relative h-[50vh] flex flex-col justify-center items-center px-6 text-center overflow-hidden">
@@ -213,5 +231,6 @@ export default function ContactPage() {
                 </div>
             </div>
         </div>
+        </>
     );
 }
