@@ -101,8 +101,8 @@ export default function AboutPage() {
                         className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 pt-20 border-t border-slate-100"
                     >
                         {[
-                            { label: "Happy Clients", value: "60+" },
-                            { label: "Impressions Generated", value: "15M+" },
+                            { label: "Happy Clients", value: "71+" },
+                            { label: "Impressions Generated", value: "90M+" },
                             { label: "Success Rate", value: "97%" },
                             { label: "Years Experience", value: "10+" }
                         ].map((stat, i) => (
