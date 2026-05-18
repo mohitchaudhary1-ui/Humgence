@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function ThankYou() {
     // Trigger Meta Pixel "Lead" event when this page loads
@@ -12,6 +13,11 @@ export default function ThankYou() {
     }, []);
 
     return (
+        <>
+         <Helmet>
+                <title>Thank You</title>
+                <meta name="robots" content="noindex,nofollow" />
+            </Helmet>
         <div className="min-h-screen bg-[#0a0f1a] flex items-center justify-center px-6">
             {/* Background Decorative Text */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-[0.03] flex items-center justify-center">
@@ -83,5 +89,6 @@ export default function ThankYou() {
                 </motion.div>
             </div>
         </div>
+        </>
     );
 }

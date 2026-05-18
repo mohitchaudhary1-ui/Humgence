@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const Reveal = ({ children, delay = 0 }) => (
     <motion.div
@@ -266,6 +267,13 @@ export default function ServicesPage() {
     ];
 
     return (
+        <>
+        <Helmet>
+            <title>Services</title>
+            <meta name="description" content="Explore Humgence's comprehensive suite of services, including Digital Growth & Consulting, Development & Engineering, Performance & Ads, Automation & API, and Creative & Immersive solutions. Discover how we bridge the gap between creativity and growth to elevate your brand." />
+            <meta name="keywords" content="Digital Growth, Brand Consulting, Digital Marketing, Website Development, App Development, Software Development, Meta Ads, Google Ads, SEO, AI Automations, WhatsApp Business API, Corporate Event Design, Wedding Content Creation, 360 Virtual Tours, Professional Shoot" />
+            <meta name="robots" content="index, follow" />
+        </Helmet>
         <div className="bg-[#f8fafc] text-[#1e293b]">
 
 
@@ -314,5 +322,6 @@ export default function ServicesPage() {
                 </Reveal>
             </section>
         </div>
+        </>
     );
 }   

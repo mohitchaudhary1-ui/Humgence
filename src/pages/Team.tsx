@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const team = [
     {
@@ -200,6 +201,13 @@ const team = [
 ];
 export default function PerfectTeamGrid() {
     return (
+        <>
+        <Helmet>
+            <title>Team</title>
+            <meta name="description" content="Meet the Humgence team: a high-performance collective of strategists, creatives, and technologists dedicated to delivering precision-driven digital marketing solutions. Each member brings a unique frequency to our digital spectrum, combining expertise in strategy, creativity, technology, and execution to drive measurable growth for our clients." />
+            <meta name="keywords" content="Humgence Team, Digital Marketing Experts, Creative Strategists, Performance Marketers, Digital Growth Specialists, Social Media Managers, Video Editors, Graphic Designers, UI/UX Designers, Business Development Managers" />
+            <meta name="robots" content="index, follow" />
+        </Helmet>
         <div className="bg-[#030712] min-h-screen py-24 px-6 overflow-hidden">
 
             {/* --- SECTION HEADER --- */}
@@ -325,5 +333,6 @@ export default function PerfectTeamGrid() {
                 ))}
             </div>
         </div>
+        </>
     );
 }

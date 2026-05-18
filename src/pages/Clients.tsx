@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Testimonials from "./components/Testimonials";
 import Partners from "./components/Partners";
+import { Helmet } from "react-helmet-async";
 
 const clients = [
     { name: "Alpha power", logo: "/clients/alpha.webp" },
@@ -84,6 +85,13 @@ export default function ClientsPage() {
     };
 
     return (
+        <>
+        <Helmet>
+            <title>Clients</title>
+            <meta name="description" content="Discover the diverse range of clients and partners we've collaborated with at Humgence. From industry leaders to innovative startups, we're proud to have built lasting relationships based on trust and excellence." />
+            <meta name="keywords" content="Humgence Clients, Digital Marketing Partners, Brand Collaborations, Business Development, Strategic Alliances" />
+            <meta name="robots" content="index, follow" />
+        </Helmet>
         <main className="min-h-screen bg-[#fcfdfe]">
             <div className="max-w-7xl mx-auto px-4 pt-24 pb-16 text-center">
                 <motion.h1
@@ -157,5 +165,6 @@ export default function ClientsPage() {
             </div>
             <Partners />
         </main>
+        </>
     );
 }
